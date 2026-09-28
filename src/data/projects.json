@@ -369,7 +369,7 @@
       "award": ""
     },
     {
-      "title": "The Taco Show",
+      "title": "Tacos Con Todo",
       "brand": "First We Feast",
       "client": "First We Feast",
       "role": "Director of Post Production",
@@ -382,7 +382,107 @@
       "still": "",
       "loop": "",
       "embed": "",
-      "file": "THE_TACO_SHOW_FINAL.mov",
+      "file": "TACOS_CON_TODO_FINAL.mov",
+      "tc": "",
+      "hero": false,
+      "episodes": [],
+      "award": ""
+    },
+    {
+      "title": "Snacked",
+      "brand": "First We Feast",
+      "client": "First We Feast",
+      "role": "Director of Post Production",
+      "year": "",
+      "views": "40M",
+      "viewsEstimated": true,
+      "disciplines": [
+        "post"
+      ],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "file": "SNACKED_FINAL.mov",
+      "tc": "",
+      "hero": false,
+      "episodes": [],
+      "award": ""
+    },
+    {
+      "title": "Heat Eaters",
+      "brand": "First We Feast",
+      "client": "First We Feast",
+      "role": "Director of Post Production",
+      "year": "",
+      "views": "15M",
+      "viewsEstimated": true,
+      "disciplines": [
+        "post"
+      ],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "file": "HEAT_EATERS_FINAL.mov",
+      "tc": "",
+      "hero": false,
+      "episodes": [],
+      "award": ""
+    },
+    {
+      "title": "Pizza Wars",
+      "brand": "First We Feast",
+      "client": "First We Feast",
+      "role": "Director of Post Production",
+      "year": "",
+      "views": "10M",
+      "viewsEstimated": true,
+      "disciplines": [
+        "post"
+      ],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "file": "PIZZA_WARS_FINAL.mov",
+      "tc": "",
+      "hero": false,
+      "episodes": [],
+      "award": ""
+    },
+    {
+      "title": "Burger Scholars",
+      "brand": "First We Feast",
+      "client": "First We Feast",
+      "role": "Director of Post Production",
+      "year": "",
+      "views": "15M",
+      "viewsEstimated": true,
+      "disciplines": [
+        "post"
+      ],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "file": "BURGER_SCHOLARS_FINAL.mov",
+      "tc": "",
+      "hero": false,
+      "episodes": [],
+      "award": ""
+    },
+    {
+      "title": "Truth or Dab",
+      "brand": "First We Feast",
+      "client": "First We Feast",
+      "role": "Director of Post Production",
+      "year": "",
+      "views": "60M",
+      "viewsEstimated": true,
+      "disciplines": [
+        "post"
+      ],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "file": "TRUTH_OR_DAB_FINAL.mov",
       "tc": "",
       "hero": false,
       "episodes": [],
