@@ -3,9 +3,9 @@
     {
       "slug": "post",
       "title": "Director of Post Production",
-      "sub": "Complex Networks · Hot Ones",
+      "sub": "Complex · First We Feast",
       "foot": "Leadership · Workflow",
-      "intro": "Ran post at Complex Networks from 2019 to 2025: a department of 30 editors, plus hiring editors, producers, colorists, and sound mixers, building the workflows, and leading licensing deals.",
+      "intro": "Ran post at Complex Networks from 2019 to 2025: a department of 30 editors across Complex and First We Feast, plus hiring editors, producers, colorists, and sound mixers, building the workflows, and leading licensing deals.",
       "base": "#4a2fc4",
       "glowA": "#8e6bff",
       "glowB": "#2c1a8a",
@@ -14,9 +14,9 @@
     {
       "slug": "filmmaker",
       "title": "Filmmaker",
-      "sub": "Documentary · Branded",
+      "sub": "Documentary · Series",
       "foot": "Directing · Shooting",
-      "intro": "Directing, producing, and shooting on the Sony A7S III. Long-form docs, short docs, and branded work.",
+      "intro": "Directing, producing, and shooting on the Sony A7S III. Long-form docs, series, and branded work.",
       "base": "#3f63e8",
       "glowA": "#8ee6ff",
       "glowB": "#5b3fd6",
@@ -27,7 +27,7 @@
       "title": "Colorist",
       "sub": "Grades · Looks",
       "foot": "Final results",
-      "intro": "Final grades and looks.",
+      "intro": "Final grades across sports, shows, covers, and documentary.",
       "base": "#b04f8f",
       "glowA": "#f7a36a",
       "glowB": "#6a3fd0",
@@ -45,137 +45,417 @@
       "loop": ""
     }
   ],
-
   "projects": [
     {
-      "title": "Hot Ones",
-      "file": "HOT_ONES_SELECTS_v3.mov",
-      "client": "First We Feast",
-      "year": "",
-      "role": "Senior Editor",
-      "disciplines": ["post"],
-      "still": "",
-      "loop": "",
-      "embed": "",
-      "tc": "00:42",
-      "hero": true
-    },
-    {
-      "title": "After the Visitors",
-      "file": "AFTER_THE_VISITORS_RC1.prproj",
-      "client": "Documentary",
-      "year": "",
-      "role": "Director",
-      "disciplines": ["filmmaker"],
-      "still": "",
-      "loop": "",
-      "embed": "",
-      "tc": "12:08",
-      "hero": true
-    },
-    {
-      "title": "Roads to Roam",
-      "file": "ROADS_TO_ROAM_DAY04.mov",
-      "client": "Figurati Designs",
-      "year": "",
-      "role": "Filmmaker",
-      "disciplines": ["filmmaker"],
-      "still": "",
-      "loop": "",
-      "embed": "",
-      "tc": "03:15",
-      "hero": true
-    },
-    {
-      "title": "[Grade title]",
-      "file": "GRADE_LOOK_FILMIC_v2.drx",
-      "client": "[Client]",
-      "year": "",
-      "role": "Colorist",
-      "disciplines": ["colorist"],
-      "still": "",
-      "loop": "",
-      "embed": "",
-      "tc": "LUT",
-      "hero": true
-    },
-    {
-      "title": "Google OLV",
-      "file": "GOOGLE_OLV_FINAL.mov",
-      "client": "Google",
-      "year": "",
-      "role": "[Role]",
-      "disciplines": ["filmmaker"],
-      "still": "",
-      "loop": "",
-      "embed": "",
-      "tc": "00:30",
-      "hero": true
-    },
-    {
-      "title": "Odd Folks of San Francisco",
-      "file": "SF_ODD_FOLKS_EP01.mov",
-      "client": "Short Doc",
-      "year": "",
-      "role": "Director",
-      "disciplines": ["filmmaker"],
-      "still": "",
-      "loop": "",
-      "embed": "",
-      "tc": "06:51",
-      "hero": true
-    },
-    {
-      "title": "Complex Post Workflow",
-      "file": "COMPLEX_POST_WORKFLOW.pdf",
-      "client": "Complex Networks",
-      "year": "2019 to 2025",
+      "title": "Sneaker Shopping",
+      "brand": "Complex",
+      "client": "Complex",
       "role": "Director of Post Production",
-      "disciplines": ["post"],
+      "year": "",
+      "disciplines": [
+        "post",
+        "colorist"
+      ],
       "still": "",
       "loop": "",
       "embed": "",
+      "file": "SNEAKER_SHOPPING_EP_FINAL.mov",
       "tc": "",
-      "hero": false
+      "hero": false,
+      "episodes": []
     },
     {
-      "title": "MLS",
-      "file": "MLS_SPOT_v5.mov",
-      "client": "MLS",
+      "title": "Everyday Struggle",
+      "brand": "Complex",
+      "client": "Complex",
+      "role": "Director of Post Production",
       "year": "",
-      "role": "[Role]",
-      "disciplines": ["post"],
+      "disciplines": [
+        "post"
+      ],
       "still": "",
       "loop": "",
       "embed": "",
+      "file": "EVERYDAY_STRUGGLE_FINAL.mov",
       "tc": "",
-      "hero": false
+      "hero": false,
+      "episodes": []
     },
     {
-      "title": "[Grade title]",
-      "file": "GRADE_02.drx",
-      "client": "[Client]",
+      "title": "The Blueprint",
+      "brand": "Complex",
+      "client": "Complex",
+      "role": "Director of Post Production",
       "year": "",
-      "role": "Colorist",
-      "disciplines": ["colorist"],
+      "disciplines": [
+        "post"
+      ],
       "still": "",
       "loop": "",
       "embed": "",
+      "file": "THE_BLUEPRINT_FINAL.mov",
       "tc": "",
-      "hero": false
+      "hero": false,
+      "episodes": []
     },
     {
-      "title": "[Grade title]",
-      "file": "GRADE_03.drx",
-      "client": "[Client]",
+      "title": "Idea Generation",
+      "brand": "Complex",
+      "client": "Complex",
+      "role": "Director of Post Production",
       "year": "",
-      "role": "Colorist",
-      "disciplines": ["colorist"],
+      "disciplines": [
+        "post"
+      ],
       "still": "",
       "loop": "",
       "embed": "",
+      "file": "IDEA_GENERATION_FINAL.mov",
       "tc": "",
-      "hero": false
+      "hero": false,
+      "episodes": []
+    },
+    {
+      "title": "360 With Speedy Morman",
+      "brand": "Complex",
+      "client": "Complex",
+      "role": "Director of Post Production",
+      "year": "",
+      "disciplines": [
+        "post"
+      ],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "file": "360_SPEEDY_MORMAN_SELECTS.mov",
+      "tc": "",
+      "hero": true,
+      "episodes": [
+        {
+          "title": "Kevin Hart",
+          "embed": ""
+        },
+        {
+          "title": "Barack Obama",
+          "embed": ""
+        },
+        {
+          "title": "The Rock",
+          "embed": ""
+        },
+        {
+          "title": "Stephen A. Smith",
+          "embed": ""
+        },
+        {
+          "title": "LeBron James",
+          "embed": ""
+        },
+        {
+          "title": "Will Smith",
+          "embed": ""
+        },
+        {
+          "title": "Druski",
+          "embed": ""
+        },
+        {
+          "title": "Kai Cenat",
+          "embed": ""
+        }
+      ]
+    },
+    {
+      "title": "GOAT Talk",
+      "brand": "Complex",
+      "client": "Complex",
+      "role": "Director of Post Production",
+      "year": "",
+      "disciplines": [
+        "post"
+      ],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "file": "GOAT_TALK_SELECTS.mov",
+      "tc": "",
+      "hero": false,
+      "episodes": [
+        {
+          "title": "Saweetie",
+          "embed": ""
+        },
+        {
+          "title": "Offset",
+          "embed": ""
+        },
+        {
+          "title": "Quavo & Chlöe Bailey",
+          "embed": ""
+        },
+        {
+          "title": "Issa Rae & Hailee Steinfeld",
+          "embed": ""
+        },
+        {
+          "title": "Earl Sweatshirt & The Alchemist",
+          "embed": ""
+        },
+        {
+          "title": "Kid Cudi & Tony Hawk",
+          "embed": ""
+        },
+        {
+          "title": "Will Ferrell & Reese Witherspoon",
+          "embed": ""
+        }
+      ]
+    },
+    {
+      "title": "Complex Covers",
+      "brand": "Complex",
+      "client": "Complex",
+      "role": "Director of Post Production",
+      "year": "",
+      "disciplines": [
+        "post",
+        "colorist"
+      ],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "file": "COMPLEX_COVERS_GRADE_v4.mov",
+      "tc": "",
+      "hero": true,
+      "episodes": [
+        {
+          "title": "Eminem",
+          "embed": ""
+        },
+        {
+          "title": "Lil Yachty & James Blake",
+          "embed": ""
+        },
+        {
+          "title": "The Weeknd",
+          "embed": ""
+        },
+        {
+          "title": "A$AP Rocky",
+          "embed": ""
+        },
+        {
+          "title": "Jack Harlow & Druski",
+          "embed": ""
+        },
+        {
+          "title": "Kid Cudi & NIGO",
+          "embed": ""
+        },
+        {
+          "title": "Clipse & Pharrell",
+          "embed": ""
+        },
+        {
+          "title": "Lana Del Rey",
+          "embed": ""
+        },
+        {
+          "title": "Dr. Dre & Snoop Dogg",
+          "embed": ""
+        }
+      ]
+    },
+    {
+      "title": "On Display",
+      "brand": "Complex",
+      "client": "Complex",
+      "role": "Director of Post Production",
+      "year": "",
+      "disciplines": [
+        "post"
+      ],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "file": "ON_DISPLAY_FINAL.mov",
+      "tc": "",
+      "hero": false,
+      "episodes": []
+    },
+    {
+      "title": "The Complex Sneakers Podcast",
+      "brand": "Complex",
+      "client": "Complex",
+      "role": "Director of Post Production",
+      "year": "",
+      "disciplines": [
+        "post"
+      ],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "file": "COMPLEX_SNEAKERS_PODCAST.mov",
+      "tc": "",
+      "hero": false,
+      "episodes": []
+    },
+    {
+      "title": "Hot Ones",
+      "brand": "First We Feast",
+      "client": "First We Feast",
+      "role": "Director of Post Production",
+      "year": "",
+      "disciplines": [
+        "post",
+        "colorist"
+      ],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "file": "HOT_ONES_SELECTS_v3.mov",
+      "tc": "",
+      "hero": true,
+      "episodes": []
+    },
+    {
+      "title": "Hot Ones Versus",
+      "brand": "First We Feast",
+      "client": "First We Feast",
+      "role": "Director of Post Production",
+      "year": "",
+      "disciplines": [
+        "post"
+      ],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "file": "HOT_ONES_VERSUS_FINAL.mov",
+      "tc": "",
+      "hero": false,
+      "episodes": []
+    },
+    {
+      "title": "The Burger Show",
+      "brand": "First We Feast",
+      "client": "First We Feast",
+      "role": "Director of Post Production",
+      "year": "",
+      "disciplines": [
+        "post"
+      ],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "file": "THE_BURGER_SHOW_FINAL.mov",
+      "tc": "",
+      "hero": false,
+      "episodes": []
+    },
+    {
+      "title": "The Taco Show",
+      "brand": "First We Feast",
+      "client": "First We Feast",
+      "role": "Director of Post Production",
+      "year": "",
+      "disciplines": [
+        "post"
+      ],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "file": "THE_TACO_SHOW_FINAL.mov",
+      "tc": "",
+      "hero": false,
+      "episodes": []
+    },
+    {
+      "title": "Black Girl Church",
+      "brand": "",
+      "client": "",
+      "role": "",
+      "year": "",
+      "disciplines": [
+        "filmmaker",
+        "colorist"
+      ],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "file": "BLACK_GIRL_CHURCH_RC2.prproj",
+      "tc": "",
+      "hero": true,
+      "episodes": []
+    },
+    {
+      "title": "Roads to Roam: Alaska",
+      "brand": "",
+      "client": "Figurati Designs",
+      "role": "",
+      "year": "",
+      "disciplines": [
+        "filmmaker",
+        "colorist"
+      ],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "file": "ROADS_TO_ROAM_ALASKA_DAY04.mov",
+      "tc": "",
+      "hero": true,
+      "episodes": []
+    },
+    {
+      "title": "UGLYCASH: The YouTube Series",
+      "brand": "",
+      "client": "UGLYCASH",
+      "role": "",
+      "year": "",
+      "disciplines": [
+        "filmmaker",
+        "colorist"
+      ],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "file": "UGLYCASH_YT_EP01_v2.mov",
+      "tc": "",
+      "hero": false,
+      "episodes": []
+    },
+    {
+      "title": "The Last Visitor",
+      "brand": "",
+      "client": "",
+      "role": "",
+      "year": "",
+      "disciplines": [
+        "filmmaker"
+      ],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "file": "THE_LAST_VISITOR_RC1.prproj",
+      "tc": "",
+      "hero": false,
+      "episodes": []
+    },
+    {
+      "title": "FIFA World Cup",
+      "brand": "",
+      "client": "FIFA",
+      "role": "",
+      "year": "",
+      "disciplines": [
+        "colorist"
+      ],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "file": "FIFA_WORLD_CUP_GRADE.drx",
+      "tc": "",
+      "hero": true,
+      "episodes": []
     }
   ]
 }
