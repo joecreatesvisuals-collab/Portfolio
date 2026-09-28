@@ -1,0 +1,64 @@
+---
+import site from '../data/site.json';
+
+interface Props {
+  current?: 'work' | 'reel' | 'about';
+}
+const { current = 'work' } = Astro.props;
+---
+<div class="shell">
+  <aside class="rail" aria-label="Quick links">
+    <a href="/" aria-label="Home">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>
+    </a>
+    <a href="/work" aria-label="All work">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg>
+    </a>
+    <a href="/work/reel" aria-label="Reel">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 5l12 7-12 7z"/></svg>
+    </a>
+    <a href={`mailto:${site.email}`} aria-label="Email">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+    </a>
+  </aside>
+
+  <div class="body">
+    <header class="top">
+      <a href="/" class="wordmark">{site.name}</a>
+      <nav class="tabs" aria-label="Main">
+        <a href="/work" aria-current={current === 'work' ? 'page' : undefined}>Work</a>
+        <a href="/work/reel" aria-current={current === 'reel' ? 'page' : undefined}>Reel</a>
+        <a href="/about" aria-current={current === 'about' ? 'page' : undefined}>About</a>
+        <a href={`mailto:${site.email}`}>Contact</a>
+      </nav>
+      <slot name="search" />
+    </header>
+    <slot />
+  </div>
+</div>
+
+<style>
+  .shell { display: flex; min-height: 100vh; background: var(--bg); }
+  .rail {
+    width: 80px; flex-shrink: 0; background: #08071a;
+    display: flex; flex-direction: column; align-items: center; gap: 12px; padding-top: 96px;
+    position: sticky; top: 0; height: 100vh;
+  }
+  .rail a { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 12px; color: #8f89b0; }
+  .rail a:hover { color: #fff; background: rgba(255,255,255,.06); }
+  .body { flex-grow: 1; min-width: 0; display: flex; flex-direction: column; }
+  .top {
+    min-height: 80px; display: flex; align-items: center; gap: 40px; flex-wrap: wrap;
+    padding: 0 48px; border-bottom: 1px solid var(--line);
+  }
+  .wordmark { font-size: 20px; font-weight: 700; letter-spacing: -0.02em; }
+  .tabs { display: flex; gap: 32px; font-size: 15px; color: var(--text-2); flex-grow: 1; }
+  .tabs a { padding: 8px 0; border-bottom: 2px solid transparent; }
+  .tabs a[aria-current='page'] { color: #fff; border-bottom-color: #fff; }
+
+  @media (max-width: 760px) {
+    .rail { display: none; }
+    .top { padding: 16px; gap: 12px 24px; }
+    .tabs { width: 100%; gap: 24px; order: 3; }
+  }
+</style>

@@ -1,0 +1,71 @@
+---
+import '@fontsource/geist-sans/400.css';
+import '@fontsource/geist-sans/500.css';
+import '@fontsource/geist-sans/600.css';
+import '@fontsource/geist-sans/700.css';
+import '@fontsource/geist-mono/400.css';
+import '../styles/global.css';
+import site from '../data/site.json';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description = site.subhead } = Astro.props;
+const fullTitle = title ? `${title} | ${site.name}` : `${site.name} | Filmmaker, Colorist, Post Production`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#0b0a1a" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL('/og.png', Astro.site)} />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <slot />
+    <script>
+      // Hover-to-play loops. Desktop: play on hover. Touch: play while on screen.
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const canHover = window.matchMedia('(hover: hover)').matches;
+      const hosts = document.querySelectorAll<HTMLElement>('[data-loop-host]');
+
+      const play = (v: HTMLVideoElement) => {
+        if (!v.src && v.dataset.src) v.src = v.dataset.src;
+        v.play().then(() => v.classList.add('is-playing')).catch(() => {});
+      };
+      const stop = (v: HTMLVideoElement) => {
+        v.pause();
+        v.classList.remove('is-playing');
+      };
+
+      if (!reduce) {
+        hosts.forEach((host) => {
+          const v = host.querySelector<HTMLVideoElement>('video[data-src]');
+          if (!v) return;
+          if (canHover) {
+            host.addEventListener('mouseenter', () => play(v));
+            host.addEventListener('mouseleave', () => stop(v));
+            host.addEventListener('focusin', () => play(v));
+            host.addEventListener('focusout', () => stop(v));
+          } else {
+            new IntersectionObserver(([e]) => (e.isIntersecting ? play(v) : stop(v)), {
+              threshold: 0.6,
+            }).observe(host);
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

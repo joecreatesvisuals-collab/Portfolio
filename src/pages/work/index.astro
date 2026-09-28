@@ -1,0 +1,100 @@
+---
+import Base from '../../layouts/Base.astro';
+import Shell from '../../components/WorkspaceShell.astro';
+import data from '../../data/projects.json';
+
+
+---
+<Base title="Work">
+  <Shell current="work">
+    <div class="bar">
+      <span>Filtered by <strong>Discipline</strong></span>
+      <span>Sorted by <strong>Role</strong></span>
+    </div>
+    <main class="tiles">
+      {data.disciplines.map((d) => (
+        <a
+          href={`/work/${d.slug}`}
+          class="tile"
+          data-loop-host
+          style={`--base:${d.base};--a:${d.glowA};--b:${d.glowB}`}
+        >
+          <div class="art">
+            <div class="glow"></div>
+            {d.loop && <video data-src={d.loop} muted loop playsinline preload="none" aria-hidden="true"></video>}
+            <div class="shade"></div>
+            <span class="play" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M7 5l12 7-12 7z"/></svg>
+            </span>
+            <div class="label">
+              <h2>{d.title}</h2>
+              <p>{d.sub}</p>
+            </div>
+          </div>
+          <div class="foot">
+            <span>{d.foot}</span>
+            <span class="open">Open →</span>
+          </div>
+        </a>
+      ))}
+    </main>
+  </Shell>
+</Base>
+
+<style>
+  .bar { display: flex; gap: 28px; padding: 26px 48px; font-size: 15px; color: var(--text-2); }
+  .bar strong { color: #fff; font-weight: 500; }
+
+  .tiles {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 28px;
+    padding: 0 48px 48px;
+  }
+  .tile {
+    display: flex; flex-direction: column;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: border-color .2s, transform .2s;
+  }
+  .tile:hover { border-color: rgba(255,255,255,.35); color: #fff; transform: translateY(-2px); }
+  .art { position: relative; overflow: hidden; aspect-ratio: 3 / 5; background: var(--base); }
+  .glow {
+    position: absolute; inset: -20%;
+    background:
+      radial-gradient(ellipse 70% 55% at 80% 20%, var(--a) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 50% at 20% 80%, var(--b) 0%, transparent 70%);
+    transition: transform .8s ease;
+  }
+  .tile:hover .glow { transform: scale(1.25) translate(-6%, 4%); }
+  .art video {
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+    opacity: 0; transition: opacity .4s ease;
+  }
+  .art :global(video.is-playing) { opacity: 1; }
+  .shade { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 45%, rgba(10,8,26,.78) 100%); }
+  .play {
+    position: absolute; right: 18px; top: 18px; width: 40px; height: 40px; border-radius: 999px;
+    background: rgba(0,0,0,.35); display: grid; place-items: center;
+  }
+  .label { position: absolute; left: 22px; right: 22px; bottom: 22px; }
+  .label h2 { margin: 0 0 6px; font-size: clamp(22px, 2vw, 28px); font-weight: 600; letter-spacing: -0.02em; line-height: 1.1; }
+  .label p { margin: 0; font-size: 15px; color: #d9d3f5; }
+  .foot {
+    min-height: 60px; display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    padding: 0 22px; font-size: 14px; color: #a8a2cc;
+  }
+  .open { color: #fff; white-space: nowrap; }
+
+  @media (max-width: 1180px) {
+    .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .art { aspect-ratio: 4 / 3; }
+  }
+  @media (max-width: 760px) {
+    .bar { padding: 20px 16px; }
+    .tiles { grid-template-columns: 1fr; padding: 0 16px 32px; gap: 16px; }
+    .art { aspect-ratio: 16 / 10; }
+  }
+</style>

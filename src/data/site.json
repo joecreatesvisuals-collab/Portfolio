@@ -1,0 +1,25 @@
+{
+  "name": "Joe Schaefer",
+  "email": "you@example.com",
+  "instagram": "https://instagram.com/JoeCreatesVisuals",
+  "announcement": {
+    "text": "New: After the Visitors, a documentary on overtourism",
+    "href": "/work/filmmaker"
+  },
+  "headline": "From first frame to final grade.",
+  "subhead": "Filmmaker, colorist, and post-production lead. Six years running post at Complex, from Hot Ones to documentaries, building the workflows and cutting the work.",
+  "reel": {
+    "embed": "",
+    "note": "Paste a Vimeo or YouTube embed URL, e.g. https://player.vimeo.com/video/123456789"
+  },
+  "clients": [
+    { "name": "Complex", "logo": "" },
+    { "name": "First We Feast", "logo": "" },
+    { "name": "Google", "logo": "" },
+    { "name": "MLS", "logo": "" },
+    { "name": "Fat Possum", "logo": "" },
+    { "name": "Oakland Roots", "logo": "" },
+    { "name": "UGLYCASH", "logo": "" },
+    { "name": "Figurati Designs", "logo": "" }
+  ]
+}

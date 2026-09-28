@@ -1,0 +1,181 @@
+{
+  "disciplines": [
+    {
+      "slug": "post",
+      "title": "Director of Post Production",
+      "sub": "Complex Networks · Hot Ones",
+      "foot": "Leadership · Workflow",
+      "intro": "Ran post at Complex Networks from 2019 to 2025: a department of 30 editors, plus hiring editors, producers, colorists, and sound mixers, building the workflows, and leading licensing deals.",
+      "base": "#4a2fc4",
+      "glowA": "#8e6bff",
+      "glowB": "#2c1a8a",
+      "loop": ""
+    },
+    {
+      "slug": "filmmaker",
+      "title": "Filmmaker",
+      "sub": "Documentary · Branded",
+      "foot": "Directing · Shooting",
+      "intro": "Directing, producing, and shooting on the Sony A7S III. Long-form docs, short docs, and branded work.",
+      "base": "#3f63e8",
+      "glowA": "#8ee6ff",
+      "glowB": "#5b3fd6",
+      "loop": ""
+    },
+    {
+      "slug": "colorist",
+      "title": "Colorist",
+      "sub": "Grades · Looks",
+      "foot": "Final results",
+      "intro": "Final grades and looks.",
+      "base": "#b04f8f",
+      "glowA": "#f7a36a",
+      "glowB": "#6a3fd0",
+      "loop": ""
+    },
+    {
+      "slug": "reel",
+      "title": "Demo Reel",
+      "sub": "The highlights",
+      "foot": "Watch",
+      "intro": "",
+      "base": "#6a3be0",
+      "glowA": "#ff8ec2",
+      "glowB": "#3f63e8",
+      "loop": ""
+    }
+  ],
+
+  "projects": [
+    {
+      "title": "Hot Ones",
+      "file": "HOT_ONES_SELECTS_v3.mov",
+      "client": "First We Feast",
+      "year": "",
+      "role": "Senior Editor",
+      "disciplines": ["post"],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "tc": "00:42",
+      "hero": true
+    },
+    {
+      "title": "After the Visitors",
+      "file": "AFTER_THE_VISITORS_RC1.prproj",
+      "client": "Documentary",
+      "year": "",
+      "role": "Director",
+      "disciplines": ["filmmaker"],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "tc": "12:08",
+      "hero": true
+    },
+    {
+      "title": "Roads to Roam",
+      "file": "ROADS_TO_ROAM_DAY04.mov",
+      "client": "Figurati Designs",
+      "year": "",
+      "role": "Filmmaker",
+      "disciplines": ["filmmaker"],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "tc": "03:15",
+      "hero": true
+    },
+    {
+      "title": "[Grade title]",
+      "file": "GRADE_LOOK_FILMIC_v2.drx",
+      "client": "[Client]",
+      "year": "",
+      "role": "Colorist",
+      "disciplines": ["colorist"],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "tc": "LUT",
+      "hero": true
+    },
+    {
+      "title": "Google OLV",
+      "file": "GOOGLE_OLV_FINAL.mov",
+      "client": "Google",
+      "year": "",
+      "role": "[Role]",
+      "disciplines": ["filmmaker"],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "tc": "00:30",
+      "hero": true
+    },
+    {
+      "title": "Odd Folks of San Francisco",
+      "file": "SF_ODD_FOLKS_EP01.mov",
+      "client": "Short Doc",
+      "year": "",
+      "role": "Director",
+      "disciplines": ["filmmaker"],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "tc": "06:51",
+      "hero": true
+    },
+    {
+      "title": "Complex Post Workflow",
+      "file": "COMPLEX_POST_WORKFLOW.pdf",
+      "client": "Complex Networks",
+      "year": "2019 to 2025",
+      "role": "Director of Post Production",
+      "disciplines": ["post"],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "tc": "",
+      "hero": false
+    },
+    {
+      "title": "MLS",
+      "file": "MLS_SPOT_v5.mov",
+      "client": "MLS",
+      "year": "",
+      "role": "[Role]",
+      "disciplines": ["post"],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "tc": "",
+      "hero": false
+    },
+    {
+      "title": "[Grade title]",
+      "file": "GRADE_02.drx",
+      "client": "[Client]",
+      "year": "",
+      "role": "Colorist",
+      "disciplines": ["colorist"],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "tc": "",
+      "hero": false
+    },
+    {
+      "title": "[Grade title]",
+      "file": "GRADE_03.drx",
+      "client": "[Client]",
+      "year": "",
+      "role": "Colorist",
+      "disciplines": ["colorist"],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "tc": "",
+      "hero": false
+    }
+  ]
+}

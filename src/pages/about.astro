@@ -1,0 +1,36 @@
+---
+import Base from '../layouts/Base.astro';
+import Shell from '../components/WorkspaceShell.astro';
+import site from '../data/site.json';
+---
+<Base title="About">
+  <Shell current="about">
+    <main class="about">
+      <h1>About</h1>
+      <p>
+        Joe Schaefer is a San Francisco based filmmaker, colorist, and post-production lead, originally from New Jersey.
+        He has been making digital media for 15 years.
+      </p>
+      <p>
+        From 2019 to 2025 he was Director of Post Production at Complex Networks, overseeing a department of 30 editors,
+        hiring editors, producers, colorists, and sound mixers, and leading licensing deals. He also cut Hot Ones as a
+        Senior Editor at First We Feast.
+      </p>
+      <p>
+        Today he directs, shoots, edits, and grades documentaries and branded work.
+      </p>
+      <div class="ctas">
+        <a class="pill pill--solid" href={`mailto:${site.email}`}>Get in touch</a>
+        <a class="pill pill--ghost" href="/work">See the work →</a>
+      </div>
+    </main>
+  </Shell>
+</Base>
+
+<style>
+  .about { max-width: 760px; padding: 56px 48px 80px; }
+  h1 { margin: 0 0 28px; font-size: clamp(40px, 5vw, 64px); font-weight: 600; letter-spacing: -0.04em; }
+  p { margin: 0 0 20px; font-size: 19px; line-height: 1.6; color: var(--text-2); }
+  .ctas { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 32px; }
+  @media (max-width: 760px) { .about { padding: 32px 16px 56px; } }
+</style>

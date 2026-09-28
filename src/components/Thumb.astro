@@ -1,0 +1,36 @@
+---
+// A gradient thumbnail that becomes a still (if provided) and a hover loop (if provided).
+interface Props {
+  still?: string;
+  loop?: string;
+  index?: number;
+  label?: string;
+}
+const { still, loop, index = 0, label = '' } = Astro.props;
+
+const grads = [
+  'linear-gradient(135deg,#6d4dff,#b06cff)',
+  'linear-gradient(135deg,#4a7bff,#7ee0ff)',
+  'linear-gradient(135deg,#e36a8b,#f5a36b)',
+  'linear-gradient(135deg,#3a2a78,#8b5cf6)',
+  'linear-gradient(135deg,#5b8cff,#b28cff)',
+  'linear-gradient(135deg,#8b3fd9,#ef7aa0)',
+];
+const bg = grads[index % grads.length];
+---
+<div class="thumb" style={`background:${bg}`}>
+  {still && <img src={still} alt={label} loading="lazy" decoding="async" />}
+  {loop && (
+    <video data-src={loop} muted loop playsinline preload="none" poster={still || undefined} aria-hidden="true"></video>
+  )}
+  <slot />
+</div>
+
+<style>
+  .thumb { position: relative; overflow: hidden; aspect-ratio: 16 / 9; }
+  .thumb img, .thumb video {
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  }
+  .thumb video { opacity: 0; transition: opacity .3s ease; }
+  .thumb :global(video.is-playing) { opacity: 1; }
+</style>
