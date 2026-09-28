@@ -310,7 +310,13 @@ const markers = site.reel.markers.map((m) => ({
   .mtrack img { height: 36px; width: auto; opacity: .75; }
   @keyframes scroll { to { transform: translateX(-50%); } }
 
-  @media (max-width: 1180px) {
+  @media (max-width: 1360px) {
+    .rail { display: none; }
+    .notes { width: 200px; }
+  }
+  @media (max-width: 1260px) {
+    .rail { display: flex; }
+    .notes { width: 220px; }
     .hero { grid-template-columns: 1fr; padding-right: var(--gutter); gap: 56px; }
   }
   @media (max-width: 760px) {
