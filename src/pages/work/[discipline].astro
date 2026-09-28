@@ -22,6 +22,8 @@ const projects = data.projects
     return { ...p, i, eps, embed, sub: bits.filter(Boolean).join(' · ') };
   });
 
+const AWARD_ICON = '★';
+
 // Post page groups shows under their network; other pages are one flat grid.
 const groups: { name: string; items: typeof projects }[] = [];
 for (const p of projects) {
@@ -65,10 +67,12 @@ for (const p of projects) {
                 <button class="card" type="button" data-loop-host data-open={`p-${p.i}`}>
                   <Thumb still={p.still} loop={p.loop} index={p.i} label={p.title}>
                     {p.tc && <span class="tc mono">{p.tc}</span>}
+                    {p.award && <span class="award">{AWARD_ICON} Award winner</span>}
                   </Thumb>
                   <span class="meta">
                     <span class="title">{p.title}</span>
                     {p.sub && <span class="sub">{p.sub}</span>}
+                    {p.award && <span class="award-line">{p.award}</span>}
                   </span>
                 </button>
               ))}
@@ -95,6 +99,7 @@ for (const p of projects) {
           <div class="viewer-meta">
             <h2>{p.title}</h2>
             {p.sub && <p>{p.sub}</p>}
+            {p.award && <p class="award-line">{p.award}</p>}
             <p class="mono file">{p.file}</p>
             {p.eps.length > 0 && (
               <ul class="eps">
@@ -179,6 +184,12 @@ for (const p of projects) {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 24px;
   }
+  .award {
+    position: absolute; left: 10px; top: 10px; z-index: 1; font-size: 12px; font-weight: 600;
+    background: rgba(0,0,0,.6); color: #ffd98a; padding: 4px 9px; border-radius: 999px;
+  }
+  .award-line { font-size: 13px; color: #ffd98a; }
+  .viewer-meta .award-line { margin-top: 6px; color: #ffd98a; }
   .eps { list-style: none; margin: 18px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
   .ep {
     display: inline-flex; align-items: center; gap: 6px; min-height: 36px; padding: 0 14px;

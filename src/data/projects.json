@@ -62,7 +62,8 @@
       "file": "SNEAKER_SHOPPING_EP_FINAL.mov",
       "tc": "",
       "hero": false,
-      "episodes": []
+      "episodes": [],
+      "award": ""
     },
     {
       "title": "Everyday Struggle",
@@ -79,7 +80,8 @@
       "file": "EVERYDAY_STRUGGLE_FINAL.mov",
       "tc": "",
       "hero": false,
-      "episodes": []
+      "episodes": [],
+      "award": ""
     },
     {
       "title": "The Blueprint",
@@ -96,7 +98,8 @@
       "file": "THE_BLUEPRINT_FINAL.mov",
       "tc": "",
       "hero": false,
-      "episodes": []
+      "episodes": [],
+      "award": ""
     },
     {
       "title": "Idea Generation",
@@ -113,7 +116,8 @@
       "file": "IDEA_GENERATION_FINAL.mov",
       "tc": "",
       "hero": false,
-      "episodes": []
+      "episodes": [],
+      "award": ""
     },
     {
       "title": "360 With Speedy Morman",
@@ -163,7 +167,8 @@
           "title": "Kai Cenat",
           "embed": ""
         }
-      ]
+      ],
+      "award": ""
     },
     {
       "title": "GOAT Talk",
@@ -209,7 +214,8 @@
           "title": "Will Ferrell & Reese Witherspoon",
           "embed": ""
         }
-      ]
+      ],
+      "award": ""
     },
     {
       "title": "Complex Covers",
@@ -264,7 +270,8 @@
           "title": "Dr. Dre & Snoop Dogg",
           "embed": ""
         }
-      ]
+      ],
+      "award": ""
     },
     {
       "title": "On Display",
@@ -281,7 +288,8 @@
       "file": "ON_DISPLAY_FINAL.mov",
       "tc": "",
       "hero": false,
-      "episodes": []
+      "episodes": [],
+      "award": ""
     },
     {
       "title": "The Complex Sneakers Podcast",
@@ -298,7 +306,8 @@
       "file": "COMPLEX_SNEAKERS_PODCAST.mov",
       "tc": "",
       "hero": false,
-      "episodes": []
+      "episodes": [],
+      "award": ""
     },
     {
       "title": "Hot Ones",
@@ -316,7 +325,8 @@
       "file": "HOT_ONES_SELECTS_v3.mov",
       "tc": "",
       "hero": true,
-      "episodes": []
+      "episodes": [],
+      "award": ""
     },
     {
       "title": "Hot Ones Versus",
@@ -333,7 +343,8 @@
       "file": "HOT_ONES_VERSUS_FINAL.mov",
       "tc": "",
       "hero": false,
-      "episodes": []
+      "episodes": [],
+      "award": ""
     },
     {
       "title": "The Burger Show",
@@ -350,7 +361,8 @@
       "file": "THE_BURGER_SHOW_FINAL.mov",
       "tc": "",
       "hero": false,
-      "episodes": []
+      "episodes": [],
+      "award": ""
     },
     {
       "title": "The Taco Show",
@@ -367,12 +379,13 @@
       "file": "THE_TACO_SHOW_FINAL.mov",
       "tc": "",
       "hero": false,
-      "episodes": []
+      "episodes": [],
+      "award": ""
     },
     {
       "title": "Black Girl Church",
       "brand": "",
-      "client": "",
+      "client": "Independent",
       "role": "",
       "year": "",
       "disciplines": [
@@ -385,7 +398,8 @@
       "file": "BLACK_GIRL_CHURCH_RC2.prproj",
       "tc": "",
       "hero": true,
-      "episodes": []
+      "episodes": [],
+      "award": "HBO Award, Best Short Documentary"
     },
     {
       "title": "Roads to Roam: Alaska",
@@ -403,7 +417,8 @@
       "file": "ROADS_TO_ROAM_ALASKA_DAY04.mov",
       "tc": "",
       "hero": true,
-      "episodes": []
+      "episodes": [],
+      "award": ""
     },
     {
       "title": "UGLYCASH: The YouTube Series",
@@ -421,10 +436,11 @@
       "file": "UGLYCASH_YT_EP01_v2.mov",
       "tc": "",
       "hero": false,
-      "episodes": []
+      "episodes": [],
+      "award": ""
     },
     {
-      "title": "The Last Visitor",
+      "title": "After the Visitors",
       "brand": "",
       "client": "",
       "role": "",
@@ -435,10 +451,11 @@
       "still": "",
       "loop": "",
       "embed": "",
-      "file": "THE_LAST_VISITOR_RC1.prproj",
+      "file": "AFTER_THE_VISITORS_RC1.prproj",
       "tc": "",
       "hero": false,
-      "episodes": []
+      "episodes": [],
+      "award": ""
     },
     {
       "title": "FIFA World Cup",
@@ -455,7 +472,8 @@
       "file": "FIFA_WORLD_CUP_GRADE.drx",
       "tc": "",
       "hero": true,
-      "episodes": []
+      "episodes": [],
+      "award": ""
     }
   ]
 }
