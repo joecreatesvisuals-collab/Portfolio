@@ -56,6 +56,9 @@ for (const p of projects) {
         ) : (
           <div class="reel-empty mono">[REEL EMBED GOES HERE: set reel.embed in src/data/site.json]</div>
         )}
+        {site.reel.url && (
+          <a class="reel-out" href={site.reel.url} target="_blank" rel="noopener">Not loading? Open the reel in a new tab →</a>
+        )}
       </main>
     ) : (
       <main class="groups">
@@ -230,6 +233,7 @@ for (const p of projects) {
   .reel iframe, .reel-empty {
     width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 14px; background: #000;
   }
+  .reel-out { display: inline-block; margin-top: 16px; font-size: 14px; color: var(--text-2); text-decoration: underline; text-underline-offset: 4px; }
   .reel-empty { display: grid; place-items: center; color: var(--text-3); font-size: 14px; padding: 24px; text-align: center; border: 1px dashed var(--line-2); background: var(--bg-2); }
 
   .viewer {
