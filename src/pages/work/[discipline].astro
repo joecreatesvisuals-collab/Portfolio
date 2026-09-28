@@ -71,10 +71,12 @@ for (const p of projects) {
                   </Thumb>
                   <span class="meta">
                     <span class="title">{p.title}</span>
-                    <span class={p.views ? 'views' : 'views views--empty'}>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
-                      {p.views ? `${p.views} views` : '[VIEWS]'}
-                    </span>
+                    {d.slug === 'post' && (
+                      <span class={p.views ? 'views' : 'views views--empty'}>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+                        {p.views ? `${p.viewsEstimated ? '~' : ''}${p.views} views` : '[VIEWS]'}
+                      </span>
+                    )}
                     {p.sub && <span class="sub">{p.sub}</span>}
                     {p.award && <span class="award-line">{p.award}</span>}
                   </span>
@@ -102,7 +104,7 @@ for (const p of projects) {
           )}
           <div class="viewer-meta">
             <h2>{p.title}</h2>
-            {p.views && <p class="views">{p.views} views</p>}
+            {d.slug === 'post' && p.views && <p class="views">{p.viewsEstimated ? '~' : ''}{p.views} views</p>}
             {p.sub && <p>{p.sub}</p>}
             {p.award && <p class="award-line">{p.award}</p>}
             <p class="mono file">{p.file}</p>

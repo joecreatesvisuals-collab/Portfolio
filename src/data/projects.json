@@ -52,7 +52,8 @@
       "client": "Complex",
       "role": "Director of Post Production",
       "year": "",
-      "views": "",
+      "views": "350M",
+      "viewsEstimated": true,
       "disciplines": [
         "post",
         "colorist"
@@ -72,7 +73,8 @@
       "client": "Complex",
       "role": "Director of Post Production",
       "year": "",
-      "views": "",
+      "views": "50M",
+      "viewsEstimated": true,
       "disciplines": [
         "post"
       ],
@@ -91,7 +93,8 @@
       "client": "Complex",
       "role": "Director of Post Production",
       "year": "",
-      "views": "",
+      "views": "20M",
+      "viewsEstimated": true,
       "disciplines": [
         "post"
       ],
@@ -110,7 +113,8 @@
       "client": "Complex",
       "role": "Director of Post Production",
       "year": "",
-      "views": "",
+      "views": "15M",
+      "viewsEstimated": true,
       "disciplines": [
         "post"
       ],
@@ -129,7 +133,8 @@
       "client": "Complex",
       "role": "Director of Post Production",
       "year": "",
-      "views": "",
+      "views": "100M",
+      "viewsEstimated": true,
       "disciplines": [
         "post"
       ],
@@ -181,7 +186,8 @@
       "client": "Complex",
       "role": "Director of Post Production",
       "year": "",
-      "views": "",
+      "views": "120M",
+      "viewsEstimated": true,
       "disciplines": [
         "post"
       ],
@@ -229,7 +235,8 @@
       "client": "Complex",
       "role": "Director of Post Production",
       "year": "",
-      "views": "",
+      "views": "75M",
+      "viewsEstimated": true,
       "disciplines": [
         "post",
         "colorist"
@@ -286,7 +293,8 @@
       "client": "Complex",
       "role": "Director of Post Production",
       "year": "",
-      "views": "",
+      "views": "20M",
+      "viewsEstimated": true,
       "disciplines": [
         "post"
       ],
@@ -305,7 +313,8 @@
       "client": "Complex",
       "role": "Director of Post Production",
       "year": "",
-      "views": "",
+      "views": "25M",
+      "viewsEstimated": true,
       "disciplines": [
         "post"
       ],
@@ -324,7 +333,8 @@
       "client": "First We Feast",
       "role": "Director of Post Production",
       "year": "",
-      "views": "",
+      "views": "1.5B",
+      "viewsEstimated": true,
       "disciplines": [
         "post",
         "colorist"
@@ -344,7 +354,8 @@
       "client": "First We Feast",
       "role": "Director of Post Production",
       "year": "",
-      "views": "",
+      "views": "50M",
+      "viewsEstimated": true,
       "disciplines": [
         "post"
       ],
@@ -363,7 +374,8 @@
       "client": "First We Feast",
       "role": "Director of Post Production",
       "year": "",
-      "views": "",
+      "views": "60M",
+      "viewsEstimated": true,
       "disciplines": [
         "post"
       ],
@@ -382,7 +394,8 @@
       "client": "First We Feast",
       "role": "Director of Post Production",
       "year": "",
-      "views": "",
+      "views": "20M",
+      "viewsEstimated": true,
       "disciplines": [
         "post"
       ],
@@ -402,6 +415,7 @@
       "role": "",
       "year": "",
       "views": "",
+      "viewsEstimated": false,
       "disciplines": [
         "filmmaker",
         "colorist"
@@ -422,6 +436,7 @@
       "role": "",
       "year": "",
       "views": "",
+      "viewsEstimated": false,
       "disciplines": [
         "filmmaker",
         "colorist"
@@ -442,6 +457,7 @@
       "role": "",
       "year": "",
       "views": "",
+      "viewsEstimated": false,
       "disciplines": [
         "filmmaker",
         "colorist"
@@ -462,6 +478,7 @@
       "role": "",
       "year": "",
       "views": "",
+      "viewsEstimated": false,
       "disciplines": [
         "filmmaker"
       ],
@@ -481,6 +498,7 @@
       "role": "",
       "year": "",
       "views": "",
+      "viewsEstimated": false,
       "disciplines": [
         "colorist"
       ],
