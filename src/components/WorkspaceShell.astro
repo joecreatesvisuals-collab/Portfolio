@@ -1,5 +1,7 @@
 ---
 import site from '../data/site.json';
+import Avatar from './Avatar.astro';
+import Footer from './Footer.astro';
 
 interface Props {
   current?: 'work' | 'reel' | 'about';
@@ -24,7 +26,7 @@ const { current = 'work' } = Astro.props;
 
   <div class="body">
     <header class="top">
-      <a href="/" class="wordmark">{site.name}</a>
+      <a href="/" class="wordmark"><Avatar size={30} />{site.name}</a>
       <nav class="tabs" aria-label="Main">
         <a href="/work" aria-current={current === 'work' ? 'page' : undefined}>Work</a>
         <a href="/work/reel" aria-current={current === 'reel' ? 'page' : undefined}>Reel</a>
@@ -33,7 +35,8 @@ const { current = 'work' } = Astro.props;
       </nav>
       <slot name="search" />
     </header>
-    <slot />
+    <div class="content"><slot /></div>
+    <Footer />
   </div>
 </div>
 
@@ -51,7 +54,8 @@ const { current = 'work' } = Astro.props;
     min-height: 80px; display: flex; align-items: center; gap: 40px; flex-wrap: wrap;
     padding: 0 48px; border-bottom: 1px solid var(--line);
   }
-  .wordmark { font-size: 20px; font-weight: 700; letter-spacing: -0.02em; }
+  .content { flex-grow: 1; }
+  .wordmark { display: inline-flex; align-items: center; gap: 10px; font-size: 20px; font-weight: 700; letter-spacing: -0.02em; }
   .tabs { display: flex; gap: 32px; font-size: 15px; color: var(--text-2); flex-grow: 1; }
   .tabs a { padding: 8px 0; border-bottom: 2px solid transparent; }
   .tabs a[aria-current='page'] { color: #fff; border-bottom-color: #fff; }

@@ -1,66 +1,102 @@
 ---
 import Base from '../layouts/Base.astro';
 import Nav from '../components/Nav.astro';
-import Thumb from '../components/Thumb.astro';
+import Footer from '../components/Footer.astro';
+import Avatar from '../components/Avatar.astro';
 import site from '../data/site.json';
-import data from '../data/projects.json';
 
-const heroCards = data.projects.filter((p) => p.hero).slice(0, 6);
-const sidebar = data.disciplines;
+const toSec = (tc: string) => {
+  const [m, s] = tc.split(':').map(Number);
+  return m * 60 + s;
+};
+const total = toSec(site.reel.duration) || 120;
+const markers = site.reel.markers.map((m) => ({
+  ...m,
+  sec: toSec(m.tc),
+  pct: Math.min(98, Math.max(2, (toSec(m.tc) / total) * 100)),
+}));
 ---
 <Base>
   <div class="page">
-    {site.announcement.text && (
-      <a class="announce" href={site.announcement.href}>{site.announcement.text} →</a>
-    )}
+    <a class="announce" href={site.status.href}>
+      {site.status.available && <span class="dot" aria-hidden="true"></span>}
+      <span>{site.status.text}</span>
+      <span aria-hidden="true">→</span>
+    </a>
     <Nav />
 
     <main class="hero">
       <div class="copy">
+        <p class="eyebrow">{site.name} · {site.roles.join(' · ')}</p>
         <h1>{site.headline}</h1>
-        <p>{site.subhead}</p>
+        <p class="sub">{site.subhead}</p>
         <div class="ctas">
-          <a href="/work" class="pill pill--solid">Enter Workspace</a>
+          <a href="/work" class="pill pill--solid">View Work</a>
           <a href="/work/reel" class="pill pill--ghost">Watch the Reel →</a>
         </div>
+        <ul class="creds" aria-label="Highlights">
+          {site.credentials.map((c) => <li>{c}</li>)}
+        </ul>
       </div>
 
-      <div class="app" aria-label="Selected work">
+      <div class="app" data-player>
         <div class="rail" aria-hidden="true">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8f89b0" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8f89b0" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 8 3 8H3s3-1 3-8"/><path d="M10 20a2 2 0 0 0 4 0"/></svg>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8f89b0" stroke-width="2"><path d="M12 16V4"/><path d="M7 9l5-5 5 5"/><path d="M4 20h16"/></svg>
         </div>
-        <nav class="side" aria-label="Workspace">
-          <div class="side-head">Workspace</div>
-          <a href="/work" class="side-item is-active">All Work</a>
-          {sidebar.map((d) => <a href={`/work/${d.slug}`} class="side-item">{d.title.replace(' Production', '')}</a>)}
-        </nav>
-        <div class="main">
-          <div class="crumbs"><strong>{site.name}</strong><span>/</span><span>All Work</span><span>/</span><span class="on">Selects</span></div>
-          <div class="toolbar" aria-hidden="true"><span>Appearance</span><span>Fields</span><span>Sorted by Date</span></div>
-          <div class="grid">
-            {heroCards.map((p, i) => (
-              <a class="card" href={`/work/${p.disciplines[0]}`} data-loop-host>
-                <Thumb still={p.still} loop={p.loop} index={i} label={p.title}>
-                  {p.tc && <span class="tc mono">{p.tc}</span>}
-                </Thumb>
-                <div class="meta">
-                  <div class="file mono">{p.file}</div>
-                  <div class="client">{p.client}</div>
-                </div>
-              </a>
-            ))}
+
+        <div class="stage">
+          <div class="crumbs"><strong>{site.name}</strong><span>/</span><span>Reels</span><span>/</span><span class="on">Demo Reel</span></div>
+          <div class="screen">
+            {site.reel.preview ? (
+              <video src={site.reel.preview} autoplay muted loop playsinline aria-label="Demo reel preview"></video>
+            ) : (
+              <div class="screen-empty"></div>
+            )}
+            <a href="/work/reel" class="bigplay" aria-label="Watch the full reel">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M7 5l12 7-12 7z"/></svg>
+            </a>
+            <span class="tcode mono" data-tc>00:00 / {site.reel.duration}</span>
+          </div>
+          <div class="timeline" aria-hidden="true">
+            <div class="track"><div class="progress" data-progress></div></div>
+            {markers.map((m) => <span class="pin" style={`left:${m.pct}%`}><Avatar size={16} /></span>)}
+          </div>
+          <div class="reelmeta">
+            <div>
+              <div class="reel-title">Demo Reel</div>
+              <div class="reel-sub">{site.roles.join(' · ')} · {site.reel.duration}</div>
+            </div>
+            <a href="/work/reel" class="reel-link">Watch full reel →</a>
           </div>
         </div>
+
+        <aside class="notes" aria-label="Reel credits">
+          <div class="notes-head">Comments <span>{markers.length}</span></div>
+          <ol>
+            {markers.map((m) => (
+              <li>
+                <button type="button" class="note" data-seek={m.sec}>
+                  <Avatar size={24} />
+                  <span class="note-body">
+                    <span class="note-top"><strong>{site.name.split(' ')[0]}</strong><span class="tc mono">{m.tc}</span></span>
+                    <span class="note-title">{m.title}</span>
+                    <span class="note-sub">{m.note}</span>
+                  </span>
+                </button>
+              </li>
+            ))}
+          </ol>
+        </aside>
       </div>
     </main>
 
-    <section class="clients" aria-label="Clients">
-      <div class="clients-label">WORK FOR AND WITH</div>
+    <section class="clients" aria-label={site.clientsLabel}>
+      <div class="clients-label">{site.clientsLabel.toUpperCase()}</div>
       <div class="marquee">
-        <div class="track">
+        <div class="mtrack">
           {[0, 1].map((dup) => (
             <ul aria-hidden={dup === 1 ? 'true' : undefined}>
               {site.clients.map((c) => (
@@ -71,8 +107,41 @@ const sidebar = data.disciplines;
         </div>
       </div>
     </section>
+
+    <Footer />
   </div>
 </Base>
+
+<script>
+  const root = document.querySelector<HTMLElement>('[data-player]');
+  const video = root?.querySelector('video');
+  const bar = root?.querySelector<HTMLElement>('[data-progress]');
+  const tc = root?.querySelector<HTMLElement>('[data-tc]');
+  const fmt = (s: number) => `${String(Math.floor(s / 60)).padStart(2, '0')}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
+
+  if (video && bar && tc) {
+    const total = tc.textContent?.split('/')[1]?.trim() ?? '';
+    video.addEventListener('timeupdate', () => {
+      if (!video.duration) return;
+      bar.style.width = `${(video.currentTime / video.duration) * 100}%`;
+      tc.textContent = `${fmt(video.currentTime)} / ${total}`;
+    });
+  } else {
+    bar?.classList.add('is-idle');
+  }
+
+  root?.querySelectorAll<HTMLButtonElement>('[data-seek]').forEach((b) => {
+    b.addEventListener('click', () => {
+      root.querySelectorAll('[data-seek]').forEach((x) => x.classList.toggle('is-on', x === b));
+      if (video) {
+        video.currentTime = Number(b.dataset.seek);
+        video.play().catch(() => {});
+      } else {
+        window.location.href = '/work/reel';
+      }
+    });
+  });
+</script>
 
 <style>
   .page {
@@ -84,64 +153,114 @@ const sidebar = data.disciplines;
       var(--bg);
   }
   .announce {
-    display: block;
+    display: flex; align-items: center; justify-content: center; gap: 10px;
     padding: 12px var(--gutter);
     background: var(--accent);
     text-align: center;
     font-size: 15px;
     font-weight: 500;
-    text-decoration: underline;
-    text-underline-offset: 3px;
   }
   .announce:hover { color: #fff; background: #6a5cf0; }
+  .announce span:nth-child(2) { text-decoration: underline; text-underline-offset: 3px; }
+  .dot {
+    width: 8px; height: 8px; border-radius: 999px; background: #3ddc84; flex-shrink: 0;
+    box-shadow: 0 0 0 4px rgba(61, 220, 132, .25);
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse { 50% { box-shadow: 0 0 0 7px rgba(61, 220, 132, 0); } }
 
   .hero {
     display: grid;
-    grid-template-columns: minmax(0, 600px) minmax(0, 1fr);
-    gap: 64px;
+    grid-template-columns: minmax(0, 520px) minmax(0, 1fr);
+    gap: 56px;
     align-items: center;
-    padding: 72px 0 96px var(--gutter);
+    padding: 56px var(--gutter) 96px;
   }
-  .copy { display: flex; flex-direction: column; gap: 32px; }
+  .copy { display: flex; flex-direction: column; gap: 28px; }
+  .eyebrow {
+    margin: 0; font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-hi);
+  }
   h1 {
-    margin: 0;
-    font-size: clamp(52px, 7.2vw, 104px);
+    margin: -8px 0 0;
+    font-size: clamp(52px, 7vw, 100px);
     line-height: 0.98;
     font-weight: 600;
     letter-spacing: -0.045em;
   }
-  .copy p { margin: 0; font-size: clamp(18px, 1.6vw, 22px); line-height: 1.5; color: var(--text-2); }
+  .sub { margin: 0; font-size: clamp(18px, 1.6vw, 21px); line-height: 1.5; color: var(--text-2); }
   .ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+  .creds {
+    list-style: none; margin: 8px 0 0; padding: 20px 0 0; border-top: 1px solid var(--line-2);
+    display: flex; flex-wrap: wrap; gap: 10px 0; font-size: 15px; color: var(--text-2);
+  }
+  .creds li { display: flex; align-items: center; }
+  .creds li + li::before { content: ''; width: 4px; height: 4px; border-radius: 999px; background: var(--text-3); margin: 0 14px; }
 
-  /* Fake review app */
+  /* Review-app player */
   .app {
-    width: 820px;
-    max-width: none;
-    height: 600px;
+    width: 100%;
     display: flex;
     background: var(--bg-2);
     border: 1px solid rgba(255,255,255,.1);
-    border-right: 0;
-    border-radius: 14px 0 0 14px;
+    border-radius: 14px;
     box-shadow: 0 40px 120px rgba(0,0,0,.55);
     overflow: hidden;
   }
   .rail { width: 56px; flex-shrink: 0; background: #0a0916; display: flex; flex-direction: column; align-items: center; gap: 22px; padding-top: 20px; }
-  .side { width: 180px; flex-shrink: 0; border-right: 1px solid var(--line); padding: 18px 12px; display: flex; flex-direction: column; gap: 4px; font-size: 13px; }
-  .side-head { font-weight: 600; font-size: 12px; color: #8f89b0; padding: 0 8px 8px; }
-  .side-item { padding: 7px 8px; border-radius: 6px; }
-  .side-item:hover, .side-item.is-active { background: rgba(255,255,255,.08); color: #fff; }
-  .main { flex-grow: 1; display: flex; flex-direction: column; min-width: 0; }
+  .stage { flex-grow: 1; min-width: 0; display: flex; flex-direction: column; border-right: 1px solid var(--line); }
   .crumbs { height: 48px; flex-shrink: 0; border-bottom: 1px solid var(--line); display: flex; align-items: center; gap: 8px; padding: 0 18px; font-size: 13px; color: #8f89b0; }
   .crumbs strong, .crumbs .on { color: #fff; }
-  .toolbar { height: 44px; flex-shrink: 0; display: flex; align-items: center; gap: 18px; padding: 0 18px; font-size: 13px; color: var(--text-2); }
-  .grid { padding: 4px 18px 18px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
-  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; transition: border-color .2s; }
-  .card:hover { border-color: var(--accent-hi); color: #fff; }
-  .tc { position: absolute; right: 8px; bottom: 8px; z-index: 1; font-size: 11px; background: rgba(0,0,0,.6); padding: 2px 6px; border-radius: 4px; }
-  .meta { padding: 10px 12px; display: flex; flex-direction: column; gap: 4px; }
-  .file { font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .client { font-size: 11px; color: var(--text-3); }
+  .screen { position: relative; aspect-ratio: 16 / 9; background: #000; margin: 16px 16px 0; border-radius: 8px; overflow: hidden; }
+  .screen video, .screen-empty { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .screen-empty {
+    display: grid; place-items: center; color: rgba(255,255,255,.6); font-size: 12px;
+    background:
+      radial-gradient(ellipse 60% 70% at 75% 25%, #8e6bff 0%, transparent 70%),
+      radial-gradient(ellipse 60% 60% at 20% 85%, #e36a8b 0%, transparent 70%),
+      #2a1d5c;
+  }
+  .bigplay {
+    position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+    width: 64px; height: 64px; border-radius: 999px; display: grid; place-items: center;
+    background: rgba(0,0,0,.45); backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,.25);
+    transition: transform .2s, background .2s;
+  }
+  .bigplay:hover { transform: translate(-50%, -50%) scale(1.06); background: var(--accent); }
+  .tcode { position: absolute; left: 12px; bottom: 10px; font-size: 12px; background: rgba(0,0,0,.6); padding: 3px 8px; border-radius: 4px; }
+  .timeline { position: relative; height: 56px; margin: 0 16px; }
+  .track { position: absolute; left: 0; right: 0; top: 14px; height: 4px; border-radius: 999px; background: rgba(255,255,255,.12); overflow: hidden; }
+  .progress { height: 100%; width: 0; background: var(--accent-hi); }
+  .progress.is-idle { width: 100%; transform-origin: left; animation: scrub 18s linear infinite; }
+  @keyframes scrub { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  .pin { position: absolute; top: 26px; transform: translateX(-50%); display: flex; }
+  .pin::before { content: ''; position: absolute; left: 50%; top: -12px; width: 1px; height: 10px; background: rgba(255,255,255,.3); }
+
+  .reelmeta {
+    margin-top: auto; padding: 16px 18px; border-top: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  }
+  .reel-title { font-size: 15px; font-weight: 600; }
+  .reel-sub { font-size: 12px; color: var(--text-3); margin-top: 2px; }
+  .reel-link { font-size: 13px; font-weight: 500; white-space: nowrap; }
+  .notes { width: 220px; flex-shrink: 0; display: flex; flex-direction: column; }
+  .notes-head {
+    height: 48px; flex-shrink: 0; border-bottom: 1px solid var(--line); display: flex; align-items: center; gap: 8px;
+    padding: 0 16px; font-size: 13px; font-weight: 600;
+  }
+  .notes-head span { font-size: 12px; font-weight: 500; color: var(--text-3); border: 1px solid var(--line-2); border-radius: 999px; padding: 1px 8px; }
+  .notes ol { list-style: none; margin: 0; padding: 8px; display: flex; flex-direction: column; gap: 2px; }
+  .note {
+    width: 100%; display: flex; gap: 10px; align-items: flex-start; text-align: left;
+    appearance: none; background: transparent; border: 0; color: inherit; font: inherit; cursor: pointer;
+    padding: 9px 8px; border-radius: 8px;
+  }
+  .note:hover, .note.is-on { background: rgba(255,255,255,.06); }
+  .note-body { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  .note-top { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--text-2); }
+  .note-top strong { color: #fff; font-weight: 600; }
+  .tc { font-size: 11px; color: var(--accent-hi); background: rgba(139,124,255,.14); padding: 1px 6px; border-radius: 4px; }
+  .note-title { font-size: 13px; font-weight: 600; color: #fff; }
+  .note-sub { font-size: 12px; color: var(--text-3); }
 
   /* Clients */
   .clients { padding: 24px 0 96px; display: flex; flex-direction: column; align-items: center; gap: 32px; }
@@ -151,21 +270,23 @@ const sidebar = data.disciplines;
     overflow: hidden;
     mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
   }
-  .track { display: flex; width: max-content; animation: scroll 40s linear infinite; }
-  .track ul { display: flex; gap: 64px; margin: 0; padding: 0 32px; list-style: none; }
-  .track li { font-size: 30px; font-weight: 600; color: #a8a2cc; white-space: nowrap; }
-  .track img { height: 36px; width: auto; opacity: .75; }
+  .mtrack { display: flex; width: max-content; animation: scroll 40s linear infinite; }
+  .mtrack ul { display: flex; gap: 64px; margin: 0; padding: 0 32px; list-style: none; }
+  .mtrack li { font-size: 30px; font-weight: 600; color: #a8a2cc; white-space: nowrap; }
+  .mtrack img { height: 36px; width: auto; opacity: .75; }
   @keyframes scroll { to { transform: translateX(-50%); } }
 
-  @media (max-width: 1100px) {
+  @media (max-width: 1180px) {
     .hero { grid-template-columns: 1fr; padding-right: var(--gutter); gap: 56px; }
-    .app { width: 100%; height: auto; border-right: 1px solid rgba(255,255,255,.1); border-radius: 14px; }
-    .rail { display: none; }
   }
-  @media (max-width: 700px) {
-    .hero { padding-top: 40px; }
-    .side, .toolbar { display: none; }
-    .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .track li { font-size: 22px; }
+  @media (max-width: 760px) {
+    .hero { padding-top: 32px; }
+    .announce { font-size: 13px; }
+    .rail { display: none; }
+    .app { flex-direction: column; }
+    .stage { border-right: 0; border-bottom: 1px solid var(--line); }
+    .notes { width: 100%; }
+    .notes ol { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .mtrack li { font-size: 22px; }
   }
 </style>

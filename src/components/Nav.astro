@@ -1,5 +1,6 @@
 ---
 import site from '../data/site.json';
+import Avatar from './Avatar.astro';
 
 interface Props {
   current?: 'work' | 'reel' | 'about';
@@ -7,14 +8,16 @@ interface Props {
 const { current } = Astro.props;
 ---
 <header class="nav">
-  <a href="/" class="wordmark">{site.name}</a>
+  <a href="/" class="wordmark"><Avatar size={36} />{site.name}</a>
   <nav aria-label="Main" class="links">
     <a href="/work" aria-current={current === 'work' ? 'page' : undefined}>Work</a>
     <a href="/work/reel" aria-current={current === 'reel' ? 'page' : undefined}>Reel</a>
     <a href="/about" aria-current={current === 'about' ? 'page' : undefined}>About</a>
   </nav>
-  <a href={`mailto:${site.email}`} class="contact">Contact</a>
-  <a href="/work" class="pill pill--solid cta">Enter Workspace</a>
+  <a href={`mailto:${site.email}`} class="pill pill--ghost avail">
+    {site.status.available && <span class="dot" aria-hidden="true"></span>}
+    {site.status.available ? 'Available for work' : 'Get in touch'}
+  </a>
 </header>
 
 <style>
@@ -27,16 +30,19 @@ const { current } = Astro.props;
     position: relative;
     z-index: 2;
   }
-  .wordmark { font-size: 24px; font-weight: 700; letter-spacing: -0.02em; }
+  .wordmark { display: inline-flex; align-items: center; gap: 12px; font-size: 22px; font-weight: 700; letter-spacing: -0.02em; }
   .links { display: flex; gap: 36px; flex-grow: 1; font-size: 17px; }
   .links a[aria-current='page'] { text-decoration: underline; text-underline-offset: 8px; }
-  .contact { font-size: 17px; }
+  .avail { font-size: 15px; min-height: 44px; padding: 0 20px; }
+  .dot {
+    width: 8px; height: 8px; border-radius: 999px; background: #3ddc84;
+    box-shadow: 0 0 0 4px rgba(61, 220, 132, .18);
+  }
 
   @media (max-width: 860px) {
-    .nav { gap: 20px; min-height: 72px; flex-wrap: wrap; padding-top: 12px; padding-bottom: 12px; }
-    .wordmark { font-size: 20px; flex-grow: 1; }
+    .nav { gap: 16px 20px; min-height: 72px; flex-wrap: wrap; padding-top: 12px; padding-bottom: 12px; }
+    .wordmark { font-size: 19px; flex-grow: 1; }
     .links { order: 3; width: 100%; gap: 24px; font-size: 16px; }
-    .contact { display: none; }
-    .cta { min-height: 44px; padding: 0 20px; font-size: 15px; }
+    .avail { font-size: 14px; padding: 0 14px; }
   }
 </style>

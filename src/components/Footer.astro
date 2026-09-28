@@ -1,0 +1,40 @@
+---
+import site from '../data/site.json';
+const year = new Date().getFullYear();
+---
+<footer class="foot">
+  <div class="cta">
+    <p class="kicker">Got a project?</p>
+    <a class="big" href={`mailto:${site.email}`}>{site.email}</a>
+  </div>
+  <div class="row">
+    <span>{site.location}</span>
+    <nav aria-label="Social" class="social">
+      <a href={site.instagram} rel="me noopener" target="_blank">Instagram {site.instagramHandle}</a>
+      <a href={`mailto:${site.email}`}>Email</a>
+    </nav>
+    <span class="copy">© {year} {site.name}</span>
+  </div>
+</footer>
+
+<style>
+  .foot {
+    border-top: 1px solid var(--line);
+    padding: 64px var(--gutter) 40px;
+    display: flex; flex-direction: column; gap: 48px;
+  }
+  .kicker { margin: 0 0 12px; font-size: 15px; color: var(--text-3); letter-spacing: .06em; text-transform: uppercase; }
+  .big {
+    font-size: clamp(19px, 5.4vw, 56px); font-weight: 600; letter-spacing: -0.035em;
+    overflow-wrap: anywhere; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 8px;
+    text-decoration-color: rgba(255,255,255,.25);
+  }
+  .big:hover { text-decoration-color: currentColor; }
+  .row {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 16px 40px;
+    font-size: 15px; color: var(--text-2);
+  }
+  .social { display: flex; gap: 28px; flex-grow: 1; }
+  .social a { color: #fff; }
+  .copy { color: var(--text-3); }
+</style>

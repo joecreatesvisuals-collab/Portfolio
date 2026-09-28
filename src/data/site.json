@@ -2,16 +2,34 @@
   "name": "Joe Schaefer",
   "email": "JoeCreatesVisuals@gmail.com",
   "instagram": "https://instagram.com/JoeCreatesVisuals",
-  "announcement": {
-    "text": "New: After the Visitors, a documentary on overtourism",
-    "href": "/work/filmmaker"
+  "instagramHandle": "@JoeCreatesVisuals",
+  "location": "Based in San Francisco",
+  "portrait": "",
+  "status": {
+    "available": true,
+    "text": "Available for freelance · Currently in post on After the Visitors",
+    "href": "mailto:JoeCreatesVisuals@gmail.com"
   },
+  "roles": ["Director of Post", "Filmmaker", "Colorist"],
   "headline": "From first frame to final grade.",
   "subhead": "Filmmaker, colorist, and post-production lead. Six years running post at Complex, from Hot Ones to documentaries, building the workflows and cutting the work.",
+  "credentials": ["30-person post team", "Hot Ones", "HBO award winner", "15 years"],
   "reel": {
     "embed": "",
-    "note": "Paste a Vimeo or YouTube embed URL, e.g. https://player.vimeo.com/video/123456789"
+    "note": "Paste a Vimeo or YouTube embed URL, e.g. https://player.vimeo.com/video/123456789",
+    "preview": "",
+    "previewNote": "Short muted MP4 of the reel for the homepage player, e.g. /media/reel-preview.mp4",
+    "duration": "02:00",
+    "markers": [
+      { "tc": "00:12", "title": "Hot Ones", "note": "First We Feast" },
+      { "tc": "00:34", "title": "Complex Covers", "note": "Eminem" },
+      { "tc": "00:51", "title": "360 With Speedy Morman", "note": "Complex" },
+      { "tc": "01:05", "title": "Black Girl Church", "note": "HBO award" },
+      { "tc": "01:22", "title": "Roads to Roam: Alaska", "note": "Figurati Designs" },
+      { "tc": "01:40", "title": "FIFA World Cup", "note": "Color" }
+    ]
   },
+  "clientsLabel": "Networks & clients",
   "clients": [
     { "name": "Complex", "logo": "" },
     { "name": "First We Feast", "logo": "" },
