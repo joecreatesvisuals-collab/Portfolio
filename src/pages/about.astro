@@ -6,31 +6,57 @@ import site from '../data/site.json';
 <Base title="About">
   <Shell current="about">
     <main class="about">
-      <h1>About</h1>
-      <p>
-        Joe Schaefer is a San Francisco based filmmaker, colorist, and post-production lead, originally from New Jersey.
-        He has been making digital media for 15 years.
-      </p>
-      <p>
-        From 2019 to 2025 he was Director of Post Production at Complex Networks, overseeing a department of 30 editors,
-        hiring editors, producers, colorists, and sound mixers, and leading licensing deals. He also cut Hot Ones as a
-        Senior Editor at First We Feast.
-      </p>
-      <p>
-        Today he directs, shoots, edits, and grades documentaries and branded work.
-      </p>
-      <div class="ctas">
-        <a class="pill pill--solid" href={`mailto:${site.email}`}>Get in touch</a>
-        <a class="pill pill--ghost" href="/work">See the work →</a>
+      <div class="text">
+        <h1>About</h1>
+        <p>
+          Joe Schaefer is a San Francisco based filmmaker, colorist, and post-production lead, originally from New Jersey.
+          He has been making digital media for 15 years.
+        </p>
+        <p>
+          From 2019 to 2025 he was Director of Post Production at Complex Networks, overseeing a department of 30 editors,
+          hiring editors, producers, colorists, and sound mixers, and leading licensing deals. He also cut Hot Ones as a
+          Senior Editor at First We Feast.
+        </p>
+        <p>
+          Today he directs, shoots, edits, and grades documentaries and branded work. His independent documentary
+          Black Girl Church won an HBO award for Best Short Documentary.
+        </p>
+        <div class="ctas">
+          <a class="pill pill--solid" href={`mailto:${site.email}`}>Get in touch</a>
+          <a class="pill pill--ghost" href="/work">See the work →</a>
+        </div>
       </div>
+      <figure class="photo">
+        <img src="/media/about.jpg" alt={`${site.name}, instant film photo`} width="1400" height="1053" loading="eager" />
+      </figure>
     </main>
   </Shell>
 </Base>
 
 <style>
-  .about { max-width: 760px; padding: 56px 48px 80px; }
+  .about {
+    display: grid;
+    grid-template-columns: minmax(0, 640px) minmax(0, 1fr);
+    gap: 64px;
+    align-items: center;
+    padding: 56px 48px 80px;
+    max-width: 1440px;
+  }
   h1 { margin: 0 0 28px; font-size: clamp(40px, 5vw, 64px); font-weight: 600; letter-spacing: -0.04em; }
   p { margin: 0 0 20px; font-size: 19px; line-height: 1.6; color: var(--text-2); }
   .ctas { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 32px; }
-  @media (max-width: 760px) { .about { padding: 32px 16px 56px; } }
+  .photo { margin: 0; }
+  .photo img {
+    width: 100%; height: auto; border-radius: 6px;
+    transform: rotate(1.5deg);
+    box-shadow: 0 30px 80px rgba(0,0,0,.55);
+  }
+  @media (max-width: 1100px) {
+    .about { grid-template-columns: 1fr; gap: 40px; }
+    .photo { max-width: 640px; order: -1; }
+  }
+  @media (max-width: 760px) {
+    .about { padding: 32px 16px 56px; }
+    .photo img { transform: rotate(1deg); }
+  }
 </style>
