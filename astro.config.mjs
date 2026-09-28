@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 
-// Swap in your real domain once it's pointed at Vercel.
+// Live domain. Used for canonical links and social share previews.
 export default defineConfig({
-  site: 'https://joecreatesvisuals.com',
+  site: 'https://joecreates.video',
 });
