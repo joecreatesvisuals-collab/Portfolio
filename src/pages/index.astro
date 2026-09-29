@@ -173,12 +173,17 @@ const markers = site.reel.markers.map((m) => ({
 
 <style>
   .page {
+    --bg: #000;
+    --bg-2: #0b0b0d;
+    --panel: #0e0e11;
+    --card: #121215;
     min-height: 100vh;
     overflow-x: clip;
     background:
-      radial-gradient(ellipse 900px 600px at 72% 18%, #3a2a78 0%, rgba(58,42,120,0) 70%),
-      radial-gradient(ellipse 700px 500px at 20% 70%, #2a1d5c 0%, rgba(42,29,92,0) 70%),
-      var(--bg);
+      radial-gradient(ellipse 900px 620px at 74% 16%, rgba(255,255,255,.13) 0%, rgba(255,255,255,0) 70%),
+      radial-gradient(ellipse 760px 520px at 12% 78%, rgba(255,255,255,.07) 0%, rgba(255,255,255,0) 70%),
+      radial-gradient(ellipse 500px 300px at 50% 0%, rgba(255,255,255,.06) 0%, rgba(255,255,255,0) 70%),
+      #000;
   }
   .announce {
     display: flex; align-items: center; justify-content: center; gap: 10px;
