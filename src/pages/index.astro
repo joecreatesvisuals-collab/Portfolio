@@ -82,7 +82,7 @@ const markers = site.reel.markers.map((m) => ({
             {markers.map((m) => (
               <li>
                 <button type="button" class="note" data-seek={m.sec}>
-                  <Avatar size={24} />
+                  <Avatar size={18} />
                   <span class="note-body">
                     <span class="note-top"><strong>{site.name.split(' ')[0]}</strong><span class="tc mono">{m.tc}</span></span>
                     <span class="note-title">{m.title}</span>
@@ -281,25 +281,25 @@ const markers = site.reel.markers.map((m) => ({
   .reel-title { font-size: 15px; font-weight: 600; }
   .reel-sub { font-size: 12px; color: var(--text-3); margin-top: 2px; }
   .reel-link { font-size: 13px; font-weight: 500; white-space: nowrap; }
-  .notes { width: 220px; flex-shrink: 0; display: flex; flex-direction: column; }
+  .notes { width: 196px; flex-shrink: 0; display: flex; flex-direction: column; }
   .notes-head {
     height: 48px; flex-shrink: 0; border-bottom: 1px solid var(--line); display: flex; align-items: center; gap: 8px;
-    padding: 0 16px; font-size: 13px; font-weight: 600;
+    padding: 0 14px; font-size: 12px; font-weight: 600;
   }
   .notes-head span { font-size: 12px; font-weight: 500; color: var(--text-3); border: 1px solid var(--line-2); border-radius: 999px; padding: 1px 8px; }
-  .notes ol { list-style: none; margin: 0; padding: 8px; display: flex; flex-direction: column; gap: 2px; }
+  .notes ol { list-style: none; margin: 0; padding: 6px; display: flex; flex-direction: column; gap: 0; }
   .note {
-    width: 100%; display: flex; gap: 10px; align-items: flex-start; text-align: left;
+    width: 100%; display: flex; gap: 8px; align-items: flex-start; text-align: left;
     appearance: none; background: transparent; border: 0; color: inherit; font: inherit; cursor: pointer;
-    padding: 9px 8px; border-radius: 8px;
+    padding: 6px 6px; border-radius: 6px;
   }
   .note:hover, .note.is-on { background: rgba(255,255,255,.06); }
   .note-body { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
-  .note-top { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--text-2); }
+  .note-top { display: flex; align-items: center; gap: 6px; font-size: 10.5px; color: var(--text-2); }
   .note-top strong { color: #fff; font-weight: 600; }
-  .tc { font-size: 11px; color: var(--accent-hi); background: rgba(139,124,255,.14); padding: 1px 6px; border-radius: 4px; }
-  .note-title { font-size: 13px; font-weight: 600; color: #fff; }
-  .note-sub { font-size: 12px; color: var(--text-3); }
+  .tc { font-size: 9px; color: var(--accent-hi); background: rgba(139,124,255,.14); padding: 0 5px; border-radius: 3px; }
+  .note-title { font-size: 10.5px; font-weight: 500; line-height: 1.25; color: #d9d9df; }
+  .note-sub { font-size: 10px; color: var(--text-3); }
 
   /* Clients */
   .clients { padding: 24px 0 96px; display: flex; flex-direction: column; align-items: center; gap: 32px; }
@@ -317,11 +317,11 @@ const markers = site.reel.markers.map((m) => ({
 
   @media (max-width: 1360px) {
     .rail { display: none; }
-    .notes { width: 200px; }
+    .notes { width: 184px; }
   }
   @media (max-width: 1260px) {
     .rail { display: flex; }
-    .notes { width: 220px; }
+    .notes { width: 196px; }
     .hero { grid-template-columns: 1fr; padding-right: var(--gutter); gap: 56px; }
   }
   @media (max-width: 760px) {
