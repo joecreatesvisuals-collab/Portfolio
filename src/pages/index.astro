@@ -49,7 +49,7 @@ const markers = site.reel.markers.map((m) => ({
 
         <div class="stage">
           <div class="crumbs"><strong>{site.name}</strong><span>/</span><span>Reels</span><span>/</span><span class="on">Demo Reel</span></div>
-          <div class="screen" data-screen data-url={site.reel.url || undefined}>
+          <div class="screen" data-screen>
             {site.reel.preview ? (
               <video src={site.reel.preview} poster={site.reel.poster || undefined} autoplay muted loop playsinline aria-label="Demo reel preview"></video>
             ) : site.reel.poster ? (
@@ -57,7 +57,7 @@ const markers = site.reel.markers.map((m) => ({
             ) : (
               <div class="screen-empty"></div>
             )}
-            <a href={site.reel.url || '/work/reel'} target={site.reel.url ? '_blank' : undefined} rel="noopener" class="bigplay" aria-label="Play the demo reel (opens in a new tab)" data-reel-play>
+            <a href="/work/reel" class="bigplay" aria-label="Watch the demo reel" data-reel-play>
               <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M7 5l12 7-12 7z"/></svg>
             </a>
             <span class="tcode mono" data-tc>00:00 / {site.reel.duration}</span>
@@ -139,9 +139,7 @@ const markers = site.reel.markers.map((m) => ({
         video.currentTime = Number(b.dataset.seek);
         video.play().catch(() => {});
       } else {
-        const url = document.querySelector<HTMLElement>('[data-screen]')?.dataset.url;
-        if (url) window.open(url, '_blank', 'noopener');
-        else window.location.href = '/work/reel';
+        window.location.href = '/work/reel';
       }
     });
   });
