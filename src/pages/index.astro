@@ -31,7 +31,7 @@ const markers = site.reel.markers.map((m) => ({
         <h1>{site.headline}</h1>
         <p class="sub">{site.subhead}</p>
         <div class="ctas">
-          <a href="/work" class="pill pill--solid">View Work</a>
+          <a href="/work" class="pill pill--solid">View my Work</a>
           <a href="/work/reel" class="pill pill--ghost">Check out my Reel →</a>
         </div>
         <ul class="creds" aria-label="Highlights">
@@ -51,7 +51,9 @@ const markers = site.reel.markers.map((m) => ({
           <div class="crumbs"><strong>{site.name}</strong><span>/</span><span>Reels</span><span>/</span><span class="on">Demo Reel</span></div>
           <div class="screen" data-screen data-embed={site.reel.embed || undefined}>
             {site.reel.preview ? (
-              <video src={site.reel.preview} autoplay muted loop playsinline aria-label="Demo reel preview"></video>
+              <video src={site.reel.preview} poster={site.reel.poster || undefined} autoplay muted loop playsinline aria-label="Demo reel preview"></video>
+            ) : site.reel.poster ? (
+              <img class="poster" src={site.reel.poster} alt="Still from Joe Schaefer's demo reel" />
             ) : (
               <div class="screen-empty"></div>
             )}
@@ -122,7 +124,7 @@ const markers = site.reel.markers.map((m) => ({
     const src = screen?.dataset.embed;
     if (!screen || !src) return false;
     if (!screen.querySelector('iframe')) {
-      screen.querySelectorAll('video, .screen-empty, [data-reel-play], [data-tc]').forEach((el) => el.remove());
+      screen.querySelectorAll('video, .poster, .screen-empty, [data-reel-play], [data-tc]').forEach((el) => el.remove());
       const f = document.createElement('iframe');
       f.src = src;
       f.title = 'Demo reel';
@@ -244,7 +246,7 @@ const markers = site.reel.markers.map((m) => ({
   .crumbs { height: 48px; flex-shrink: 0; border-bottom: 1px solid var(--line); display: flex; align-items: center; gap: 8px; padding: 0 18px; font-size: 13px; color: #8f89b0; }
   .crumbs strong, .crumbs .on { color: #fff; }
   .screen { position: relative; aspect-ratio: 16 / 9; background: #000; margin: 16px 16px 0; border-radius: 8px; overflow: hidden; }
-  .screen video, .screen-empty { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .screen video, .screen .poster, .screen-empty { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
   .screen-empty {
     display: grid; place-items: center; color: rgba(255,255,255,.6); font-size: 12px;
     background:
