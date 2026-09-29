@@ -267,6 +267,9 @@ const markers = site.reel.markers.map((m) => ({
     transition: transform .2s, background .2s;
   }
   .bigplay:hover { transform: translate(-50%, -50%) scale(1.06); background: var(--accent); }
+  /* With a thumbnail, keep the play button off the subject. */
+  .screen:has(.poster) .bigplay { left: auto; top: auto; right: 16px; bottom: 14px; transform: none; width: 52px; height: 52px; }
+  .screen:has(.poster) .bigplay:hover { transform: scale(1.06); }
   .tcode { position: absolute; left: 12px; bottom: 10px; font-size: 12px; background: rgba(0,0,0,.6); padding: 3px 8px; border-radius: 4px; }
   .timeline { position: relative; height: 56px; margin: 0 16px; }
   .track { position: absolute; left: 0; right: 0; top: 14px; height: 4px; border-radius: 999px; background: rgba(255,255,255,.12); overflow: hidden; }
