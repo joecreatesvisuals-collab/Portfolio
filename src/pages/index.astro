@@ -73,23 +73,6 @@ const markers = site.reel.markers.map((m) => ({
           </div>
         </div>
 
-        <aside class="notes" aria-label="Reel credits">
-          <div class="notes-head">Comments <span>{markers.length}</span></div>
-          <ol>
-            {markers.map((m) => (
-              <li>
-                <button type="button" class="note" data-seek={m.sec}>
-                  <Avatar size={18} />
-                  <span class="note-body">
-                    <span class="note-top"><strong>{site.name.split(' ')[0]}</strong><span class="tc mono">{m.tc}</span></span>
-                    <span class="note-title">{m.title}</span>
-                    <span class="note-sub">{m.note}</span>
-                  </span>
-                </button>
-              </li>
-            ))}
-          </ol>
-        </aside>
       </div>
     </main>
 
@@ -216,13 +199,13 @@ const markers = site.reel.markers.map((m) => ({
   /* The whole window opens the Reel page; real controls sit above the link. */
   .app-link { position: absolute; inset: 0; z-index: 1; border-radius: inherit; }
   .app-link:focus-visible { outline: 2px solid var(--accent-hi); outline-offset: 3px; }
-  .bigplay, .reel-link, .notes { position: relative; z-index: 2; }
+  .bigplay, .reel-link { position: relative; z-index: 2; }
   .app:hover { border-color: rgba(255,255,255,.24); transform: translateY(-3px); box-shadow: 0 50px 140px rgba(0,0,0,.65); }
   .app:hover .bigplay { background: var(--accent); }
   .app:hover .screen .poster { transform: scale(1.02); }
   .screen .poster { transition: transform .6s ease; }
   .rail { width: 56px; flex-shrink: 0; background: #0a0916; display: flex; flex-direction: column; align-items: center; gap: 22px; padding-top: 20px; }
-  .stage { flex-grow: 1; min-width: 0; display: flex; flex-direction: column; border-right: 1px solid var(--line); }
+  .stage { flex-grow: 1; min-width: 0; display: flex; flex-direction: column; }
   .crumbs { height: 48px; flex-shrink: 0; border-bottom: 1px solid var(--line); display: flex; align-items: center; gap: 8px; padding: 0 18px; font-size: 13px; color: #8f89b0; }
   .crumbs strong, .crumbs .on { color: #fff; }
   .screen { position: relative; aspect-ratio: 16 / 9; background: #000; margin: 16px 16px 0; border-radius: 8px; overflow: hidden; }
