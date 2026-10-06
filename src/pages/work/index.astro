@@ -21,8 +21,8 @@ const tiles = data.disciplines.filter((d) => !d.archived);
           data-loop-host
           style={`--base:${d.base};--a:${d.glowA};--b:${d.glowB}`}
         >
-          <div class="art">
-            <div class="glow"></div>
+          <div class="art" style={d.tileBg ? `background:${d.tileBg}` : undefined}>
+            {!d.tileBg && <div class="glow"></div>}
             {d.loop && <video data-src={d.loop} muted loop playsinline preload="none" aria-hidden="true"></video>}
             {d.image && <img class="tile-img" src={d.image} alt="" style={`object-position:${d.imagePos || 'center'}`} />}
             {d.logo && <img class="tile-logo" src={d.logo} alt={d.logoAlt || ''} />}

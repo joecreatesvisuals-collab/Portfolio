@@ -12,7 +12,8 @@
       "loop": "",
       "archived": false,
       "logo": "/media/logo-complex-white.png",
-      "logoAlt": "Complex"
+      "logoAlt": "Complex",
+      "tileBg": "#000000"
     },
     {
       "slug": "editing",
