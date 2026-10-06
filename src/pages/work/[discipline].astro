@@ -6,7 +6,7 @@ import data from '../../data/projects.json';
 import site from '../../data/site.json';
 
 export function getStaticPaths() {
-  return data.disciplines.map((d) => ({ params: { discipline: d.slug }, props: { d } }));
+  return data.disciplines.filter((d) => !d.archived).map((d) => ({ params: { discipline: d.slug }, props: { d } }));
 }
 
 const { d } = Astro.props;

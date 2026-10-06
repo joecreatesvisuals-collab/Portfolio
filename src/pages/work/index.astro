@@ -3,6 +3,8 @@ import Base from '../../layouts/Base.astro';
 import Shell from '../../components/WorkspaceShell.astro';
 import data from '../../data/projects.json';
 
+const tiles = data.disciplines.filter((d) => !d.archived);
+
 
 ---
 <Base title="Work">
@@ -11,8 +13,8 @@ import data from '../../data/projects.json';
       <span>Filtered by <strong>Discipline</strong></span>
       <span>Sorted by <strong>Role</strong></span>
     </div>
-    <main class="tiles">
-      {data.disciplines.map((d) => (
+    <main class="tiles" style={`--cols:${tiles.length}`}>
+      {tiles.map((d) => (
         <a
           href={`/work/${d.slug}`}
           class="tile"
@@ -47,7 +49,7 @@ import data from '../../data/projects.json';
 
   .tiles {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(var(--cols, 4), minmax(0, 1fr));
     gap: 28px;
     padding: 0 48px 48px;
   }
@@ -60,7 +62,7 @@ import data from '../../data/projects.json';
     transition: border-color .2s, transform .2s;
   }
   .tile:hover { border-color: rgba(255,255,255,.35); color: #fff; transform: translateY(-2px); }
-  .art { position: relative; overflow: hidden; aspect-ratio: 3 / 5; background: var(--base); }
+  .art { position: relative; overflow: hidden; aspect-ratio: 4 / 5; background: var(--base); }
   .glow {
     position: absolute; inset: -20%;
     background:
@@ -89,8 +91,11 @@ import data from '../../data/projects.json';
   .open { color: #fff; white-space: nowrap; }
 
   @media (max-width: 1180px) {
-    .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .art { aspect-ratio: 4 / 3; }
+    .art { aspect-ratio: 4 / 5; }
+  }
+  @media (max-width: 960px) {
+    .tiles { grid-template-columns: 1fr; }
+    .art { aspect-ratio: 16 / 9; }
   }
   @media (max-width: 760px) {
     .bar { padding: 20px 16px; }

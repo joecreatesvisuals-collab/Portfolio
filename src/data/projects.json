@@ -9,7 +9,8 @@
       "base": "#4a2fc4",
       "glowA": "#8e6bff",
       "glowB": "#2c1a8a",
-      "loop": ""
+      "loop": "",
+      "archived": false
     },
     {
       "slug": "filmmaker",
@@ -20,7 +21,8 @@
       "base": "#3f63e8",
       "glowA": "#8ee6ff",
       "glowB": "#5b3fd6",
-      "loop": ""
+      "loop": "",
+      "archived": false
     },
     {
       "slug": "colorist",
@@ -31,7 +33,8 @@
       "base": "#b04f8f",
       "glowA": "#f7a36a",
       "glowB": "#6a3fd0",
-      "loop": ""
+      "loop": "",
+      "archived": true
     },
     {
       "slug": "reel",
@@ -42,7 +45,8 @@
       "base": "#6a3be0",
       "glowA": "#ff8ec2",
       "glowB": "#3f63e8",
-      "loop": ""
+      "loop": "",
+      "archived": false
     }
   ],
   "projects": [
