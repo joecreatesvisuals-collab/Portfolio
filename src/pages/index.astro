@@ -62,7 +62,6 @@ const markers = site.reel.markers.map((m) => ({
           </div>
           <div class="timeline" aria-hidden="true">
             <div class="track"><div class="progress" data-progress></div></div>
-            {markers.map((m) => <span class="pin" style={`left:${m.pct}%`}><Avatar size={16} /></span>)}
           </div>
           <div class="reelmeta">
             <div>
@@ -228,7 +227,7 @@ const markers = site.reel.markers.map((m) => ({
   .screen:has(.poster) .bigplay { left: auto; top: auto; right: 16px; bottom: 14px; transform: none; width: 52px; height: 52px; }
   .screen:has(.poster) .bigplay:hover { transform: scale(1.06); }
   .tcode { position: absolute; left: 12px; bottom: 10px; font-size: 12px; background: rgba(0,0,0,.6); padding: 3px 8px; border-radius: 4px; }
-  .timeline { position: relative; height: 56px; margin: 0 16px; }
+  .timeline { position: relative; height: 32px; margin: 0 16px; }
   .track { position: absolute; left: 0; right: 0; top: 14px; height: 4px; border-radius: 999px; background: rgba(255,255,255,.12); overflow: hidden; }
   .progress { height: 100%; width: 0; background: var(--accent-hi); }
   .progress.is-idle { width: 100%; transform-origin: left; animation: scrub 18s linear infinite; }
