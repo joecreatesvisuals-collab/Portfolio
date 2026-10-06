@@ -436,7 +436,10 @@
       "tc": "",
       "hero": true,
       "episodes": [],
-      "award": ""
+      "award": "",
+      "roleBy": {
+        "editing": "Senior Editor"
+      }
     },
     {
       "title": "Hot Ones Versus",
