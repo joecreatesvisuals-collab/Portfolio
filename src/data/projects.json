@@ -15,6 +15,18 @@
       "logoAlt": "Complex"
     },
     {
+      "slug": "editing",
+      "archived": false,
+      "title": "Editing",
+      "sub": "YouTube series · A decade of edits",
+      "foot": "Cutting · Story",
+      "intro": "A decade of cutting YouTube series, from Hot Ones to in-house brand series.",
+      "base": "#1f7a8c",
+      "glowA": "#7dffd6",
+      "glowB": "#3f4fe8",
+      "loop": ""
+    },
+    {
       "slug": "filmmaker",
       "title": "Filmmaker",
       "sub": "Documentary · Series",
@@ -407,6 +419,7 @@
       "episodeCountEstimated": true,
       "disciplines": [
         "post",
+        "editing",
         "colorist"
       ],
       "still": "/media/hot-ones.jpg",
@@ -723,7 +736,7 @@
       "episodeCount": 0,
       "episodeCountEstimated": false,
       "disciplines": [
-        "filmmaker",
+        "editing",
         "colorist"
       ],
       "still": "",
@@ -757,6 +770,33 @@
       "loop": "",
       "embed": "",
       "file": "AFTER_THE_VISITORS_RC1.prproj",
+      "tc": "",
+      "hero": false,
+      "episodes": [],
+      "award": ""
+    },
+    {
+      "title": "Transmissions from the Bay",
+      "brand": "",
+      "client": "",
+      "description": "[Short description of the project]",
+      "contributions": [
+        "[Your role, e.g. Director, DP, Editor]",
+        "[What you did on it]"
+      ],
+      "role": "",
+      "year": "",
+      "views": "",
+      "viewsEstimated": false,
+      "episodeCount": 0,
+      "episodeCountEstimated": false,
+      "disciplines": [
+        "filmmaker"
+      ],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "file": "TRANSMISSIONS_FROM_THE_BAY_v1.prproj",
       "tc": "",
       "hero": false,
       "episodes": [],

@@ -99,9 +99,10 @@ const tiles = data.disciplines.filter((d) => !d.archived);
   .open { color: #fff; white-space: nowrap; }
 
   @media (max-width: 1180px) {
-    .art { aspect-ratio: 4 / 5; }
+    .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .art { aspect-ratio: 4 / 3; }
   }
-  @media (max-width: 960px) {
+  @media (max-width: 760px) {
     .tiles { grid-template-columns: 1fr; }
     .art { aspect-ratio: 16 / 9; }
   }
