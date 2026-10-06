@@ -39,7 +39,9 @@
       "glowA": "#8ee6ff",
       "glowB": "#5b3fd6",
       "loop": "",
-      "archived": false
+      "archived": false,
+      "image": "/media/filmmaker-tile.jpg",
+      "imagePos": "50% 35%"
     },
     {
       "slug": "colorist",
