@@ -54,6 +54,8 @@
       "year": "",
       "views": "350M",
       "viewsEstimated": true,
+      "episodeCount": 250,
+      "episodeCountEstimated": true,
       "disciplines": [
         "post",
         "colorist"
@@ -75,6 +77,8 @@
       "year": "",
       "views": "50M",
       "viewsEstimated": true,
+      "episodeCount": 300,
+      "episodeCountEstimated": true,
       "disciplines": [
         "post"
       ],
@@ -95,6 +99,8 @@
       "year": "",
       "views": "15M",
       "viewsEstimated": true,
+      "episodeCount": 40,
+      "episodeCountEstimated": true,
       "disciplines": [
         "post"
       ],
@@ -115,6 +121,8 @@
       "year": "",
       "views": "100M",
       "viewsEstimated": true,
+      "episodeCount": 60,
+      "episodeCountEstimated": true,
       "disciplines": [
         "post"
       ],
@@ -168,6 +176,8 @@
       "year": "",
       "views": "120M",
       "viewsEstimated": true,
+      "episodeCount": 120,
+      "episodeCountEstimated": true,
       "disciplines": [
         "post"
       ],
@@ -217,6 +227,8 @@
       "year": "",
       "views": "75M",
       "viewsEstimated": true,
+      "episodeCount": 60,
+      "episodeCountEstimated": true,
       "disciplines": [
         "post",
         "colorist"
@@ -275,6 +287,8 @@
       "year": "",
       "views": "20M",
       "viewsEstimated": true,
+      "episodeCount": 30,
+      "episodeCountEstimated": true,
       "disciplines": [
         "post"
       ],
@@ -295,6 +309,8 @@
       "year": "",
       "views": "25M",
       "viewsEstimated": true,
+      "episodeCount": 150,
+      "episodeCountEstimated": true,
       "disciplines": [
         "post"
       ],
@@ -315,11 +331,13 @@
       "year": "",
       "views": "1.5B",
       "viewsEstimated": true,
+      "episodeCount": 190,
+      "episodeCountEstimated": true,
       "disciplines": [
         "post",
         "colorist"
       ],
-      "still": "",
+      "still": "/media/hot-ones.jpg",
       "loop": "",
       "embed": "",
       "file": "HOT_ONES_SELECTS_v3.mov",
@@ -336,10 +354,12 @@
       "year": "",
       "views": "50M",
       "viewsEstimated": true,
+      "episodeCount": 15,
+      "episodeCountEstimated": true,
       "disciplines": [
         "post"
       ],
-      "still": "",
+      "still": "/media/hot-ones-versus.jpg",
       "loop": "",
       "embed": "",
       "file": "HOT_ONES_VERSUS_FINAL.mov",
@@ -356,10 +376,12 @@
       "year": "",
       "views": "60M",
       "viewsEstimated": true,
+      "episodeCount": 40,
+      "episodeCountEstimated": true,
       "disciplines": [
         "post"
       ],
-      "still": "",
+      "still": "/media/the-burger-show.jpg",
       "loop": "",
       "embed": "",
       "file": "THE_BURGER_SHOW_FINAL.mov",
@@ -376,10 +398,12 @@
       "year": "",
       "views": "20M",
       "viewsEstimated": true,
+      "episodeCount": 10,
+      "episodeCountEstimated": true,
       "disciplines": [
         "post"
       ],
-      "still": "",
+      "still": "/media/tacos-con-todo.jpg",
       "loop": "",
       "embed": "",
       "file": "TACOS_CON_TODO_FINAL.mov",
@@ -396,10 +420,12 @@
       "year": "",
       "views": "40M",
       "viewsEstimated": true,
+      "episodeCount": 120,
+      "episodeCountEstimated": true,
       "disciplines": [
         "post"
       ],
-      "still": "",
+      "still": "/media/snacked.jpg",
       "loop": "",
       "embed": "",
       "file": "SNACKED_FINAL.mov",
@@ -416,10 +442,12 @@
       "year": "",
       "views": "15M",
       "viewsEstimated": true,
+      "episodeCount": 30,
+      "episodeCountEstimated": true,
       "disciplines": [
         "post"
       ],
-      "still": "",
+      "still": "/media/heat-eaters.jpg",
       "loop": "",
       "embed": "",
       "file": "HEAT_EATERS_FINAL.mov",
@@ -436,10 +464,12 @@
       "year": "",
       "views": "10M",
       "viewsEstimated": true,
+      "episodeCount": 8,
+      "episodeCountEstimated": true,
       "disciplines": [
         "post"
       ],
-      "still": "",
+      "still": "/media/pizza-wars.jpg",
       "loop": "",
       "embed": "",
       "file": "PIZZA_WARS_FINAL.mov",
@@ -456,10 +486,12 @@
       "year": "",
       "views": "15M",
       "viewsEstimated": true,
+      "episodeCount": 40,
+      "episodeCountEstimated": true,
       "disciplines": [
         "post"
       ],
-      "still": "",
+      "still": "/media/burger-scholars.jpg",
       "loop": "",
       "embed": "",
       "file": "BURGER_SCHOLARS_FINAL.mov",
@@ -476,10 +508,12 @@
       "year": "",
       "views": "60M",
       "viewsEstimated": true,
+      "episodeCount": 15,
+      "episodeCountEstimated": true,
       "disciplines": [
         "post"
       ],
-      "still": "",
+      "still": "/media/truth-or-dab.jpg",
       "loop": "",
       "embed": "",
       "file": "TRUTH_OR_DAB_FINAL.mov",
@@ -496,6 +530,8 @@
       "year": "",
       "views": "",
       "viewsEstimated": false,
+      "episodeCount": 0,
+      "episodeCountEstimated": false,
       "disciplines": [
         "filmmaker",
         "colorist"
@@ -517,6 +553,8 @@
       "year": "",
       "views": "",
       "viewsEstimated": false,
+      "episodeCount": 0,
+      "episodeCountEstimated": false,
       "disciplines": [
         "filmmaker",
         "colorist"
@@ -538,6 +576,8 @@
       "year": "",
       "views": "",
       "viewsEstimated": false,
+      "episodeCount": 0,
+      "episodeCountEstimated": false,
       "disciplines": [
         "filmmaker",
         "colorist"
@@ -559,6 +599,8 @@
       "year": "",
       "views": "",
       "viewsEstimated": false,
+      "episodeCount": 0,
+      "episodeCountEstimated": false,
       "disciplines": [
         "filmmaker"
       ],
@@ -579,6 +621,8 @@
       "year": "",
       "views": "",
       "viewsEstimated": false,
+      "episodeCount": 0,
+      "episodeCountEstimated": false,
       "disciplines": [
         "colorist"
       ],

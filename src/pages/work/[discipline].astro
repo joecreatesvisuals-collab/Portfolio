@@ -18,7 +18,8 @@ const projects = data.projects
     const embed = p.embed || eps.find((e) => e.embed)?.embed || '';
     const bits =
       d.slug === 'post' ? [p.year] : d.slug === 'colorist' ? [p.client, p.year] : [p.client, p.role, p.year];
-    if (eps.length) bits.push(`${eps.length} episodes`);
+    if (p.episodeCount) bits.push(`${p.episodeCountEstimated ? '~' : ''}${p.episodeCount} episodes`);
+    else if (eps.length) bits.push(`${eps.length} episodes`);
     return { ...p, i, eps, embed, sub: bits.filter(Boolean).join(' · ') };
   });
 
