@@ -10,7 +10,9 @@
       "glowA": "#8e6bff",
       "glowB": "#2c1a8a",
       "loop": "",
-      "archived": false
+      "archived": false,
+      "logo": "/media/logo-complex-white.png",
+      "logoAlt": "Complex"
     },
     {
       "slug": "filmmaker",
