@@ -836,6 +836,195 @@
       "hero": true,
       "episodes": [],
       "award": ""
+    },
+    {
+      "title": "BLM Protests",
+      "brand": "",
+      "client": "",
+      "description": "Edits built from footage of the Black Lives Matter protests.",
+      "contributions": [
+        "[What you edited, e.g. series name, episodes]",
+        "[Your role and what you did on it]"
+      ],
+      "role": "",
+      "year": "",
+      "views": "",
+      "viewsEstimated": false,
+      "episodeCount": 0,
+      "episodeCountEstimated": false,
+      "disciplines": [
+        "editing"
+      ],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "file": "BLM_PROTESTS_EDIT_v1.mov",
+      "tc": "",
+      "hero": false,
+      "episodes": [],
+      "award": ""
+    },
+    {
+      "title": "Have Fun Edits",
+      "brand": "",
+      "client": "",
+      "description": "[Short description of Have Fun Edits]",
+      "contributions": [
+        "[What you edited, e.g. series name, episodes]",
+        "[Your role and what you did on it]"
+      ],
+      "role": "",
+      "year": "",
+      "views": "",
+      "viewsEstimated": false,
+      "episodeCount": 0,
+      "episodeCountEstimated": false,
+      "disciplines": [
+        "editing"
+      ],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "file": "HAVE_FUN_EDITS_EDIT_v1.mov",
+      "tc": "",
+      "hero": false,
+      "episodes": [],
+      "award": ""
+    },
+    {
+      "title": "Variety",
+      "brand": "",
+      "client": "Variety",
+      "description": "Video for Variety, the entertainment industry publication covering film, TV, and music.",
+      "contributions": [
+        "[What you edited, e.g. series name, episodes]",
+        "[Your role and what you did on it]"
+      ],
+      "role": "",
+      "year": "",
+      "views": "",
+      "viewsEstimated": false,
+      "episodeCount": 0,
+      "episodeCountEstimated": false,
+      "disciplines": [
+        "editing"
+      ],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "file": "VARIETY_EDIT_v1.mov",
+      "tc": "",
+      "hero": false,
+      "episodes": [],
+      "award": ""
+    },
+    {
+      "title": "Figurati Designs",
+      "brand": "",
+      "client": "Figurati Designs",
+      "description": "Edits for Figurati Designs, the client behind the Roads to Roam motorcycle series.",
+      "contributions": [
+        "[What you edited, e.g. series name, episodes]",
+        "[Your role and what you did on it]"
+      ],
+      "role": "",
+      "year": "",
+      "views": "",
+      "viewsEstimated": false,
+      "episodeCount": 0,
+      "episodeCountEstimated": false,
+      "disciplines": [
+        "editing"
+      ],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "file": "FIGURATI_DESIGNS_EDIT_v1.mov",
+      "tc": "",
+      "hero": false,
+      "episodes": [],
+      "award": ""
+    },
+    {
+      "title": "EATER",
+      "brand": "",
+      "client": "Eater",
+      "description": "Video for Eater, the food and dining media brand.",
+      "contributions": [
+        "[What you edited, e.g. series name, episodes]",
+        "[Your role and what you did on it]"
+      ],
+      "role": "",
+      "year": "",
+      "views": "",
+      "viewsEstimated": false,
+      "episodeCount": 0,
+      "episodeCountEstimated": false,
+      "disciplines": [
+        "editing"
+      ],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "file": "EATER_EDIT_v1.mov",
+      "tc": "",
+      "hero": false,
+      "episodes": [],
+      "award": ""
+    },
+    {
+      "title": "Milk Street Kitchen",
+      "brand": "",
+      "client": "Milk Street",
+      "description": "Cooking video for Christopher Kimball's Milk Street.",
+      "contributions": [
+        "[What you edited, e.g. series name, episodes]",
+        "[Your role and what you did on it]"
+      ],
+      "role": "",
+      "year": "",
+      "views": "",
+      "viewsEstimated": false,
+      "episodeCount": 0,
+      "episodeCountEstimated": false,
+      "disciplines": [
+        "editing"
+      ],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "file": "MILK_STREET_KITCHEN_EDIT_v1.mov",
+      "tc": "",
+      "hero": false,
+      "episodes": [],
+      "award": ""
+    },
+    {
+      "title": "Chelsea",
+      "brand": "",
+      "client": "",
+      "description": "[Short description of the Chelsea project]",
+      "contributions": [
+        "[What you edited, e.g. series name, episodes]",
+        "[Your role and what you did on it]"
+      ],
+      "role": "",
+      "year": "",
+      "views": "",
+      "viewsEstimated": false,
+      "episodeCount": 0,
+      "episodeCountEstimated": false,
+      "disciplines": [
+        "editing"
+      ],
+      "still": "",
+      "loop": "",
+      "embed": "",
+      "file": "CHELSEA_EDIT_v1.mov",
+      "tc": "",
+      "hero": false,
+      "episodes": [],
+      "award": ""
     }
   ]
 }
