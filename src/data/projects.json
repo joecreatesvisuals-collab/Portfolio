@@ -24,7 +24,9 @@
       "base": "#1f7a8c",
       "glowA": "#7dffd6",
       "glowB": "#3f4fe8",
-      "loop": ""
+      "loop": "",
+      "image": "/media/editing-tile.jpg",
+      "imagePos": "45% 35%"
     },
     {
       "slug": "filmmaker",
@@ -60,7 +62,9 @@
       "glowA": "#ff8ec2",
       "glowB": "#3f63e8",
       "loop": "",
-      "archived": false
+      "archived": false,
+      "image": "/media/reel-tile.jpg",
+      "imagePos": "60% 30%"
     }
   ],
   "projects": [
