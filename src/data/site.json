@@ -143,5 +143,14 @@
       "name": "Have Fun Edits",
       "logo": ""
     }
-  ]
+  ],
+  "notice": {
+    "enabled": true,
+    "key": "2026-10",
+    "version": "0.9",
+    "title": "Still in the edit.",
+    "text": "The site's live, but a few sections are still being cut, graded, and filled in. Have a look around, and check back for the final version.",
+    "progress": 80,
+    "button": "Take a look"
+  }
 }

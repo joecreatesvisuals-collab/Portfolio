@@ -1,0 +1,70 @@
+---
+import site from '../data/site.json';
+const n = site.notice;
+---
+{n?.enabled && (
+  <dialog class="notice" id="site-notice" aria-labelledby="notice-title" data-key={n.key}>
+    <div class="n-bar">
+      <span class="n-dot" aria-hidden="true"></span>
+      <span class="n-status mono">STATUS: IN POST</span>
+      <span class="n-tc mono" aria-hidden="true">v{n.version}</span>
+    </div>
+    <div class="n-body">
+      <p class="n-kicker">Work in progress</p>
+      <h2 id="notice-title">{n.title}</h2>
+      <p class="n-text">{n.text}</p>
+      <div class="n-progress" aria-hidden="true"><span style={`width:${n.progress}%`}></span></div>
+      <p class="n-small mono">{n.progress}% rendered</p>
+      <button type="button" class="pill pill--solid n-btn" data-notice-close>{n.button}</button>
+    </div>
+  </dialog>
+)}
+
+<script>
+  const dlg = document.getElementById('site-notice') as HTMLDialogElement | null;
+  if (dlg) {
+    const key = 'notice-seen-' + (dlg.dataset.key || '1');
+    let seen = false;
+    try { seen = sessionStorage.getItem(key) === '1'; } catch {}
+    const close = () => {
+      dlg.close();
+      try { sessionStorage.setItem(key, '1'); } catch {}
+    };
+    if (!seen) setTimeout(() => dlg.showModal(), 450);
+    dlg.querySelector('[data-notice-close]')?.addEventListener('click', close);
+    dlg.addEventListener('cancel', () => { try { sessionStorage.setItem(key, '1'); } catch {} });
+    dlg.addEventListener('click', (e) => { if (e.target === dlg) close(); });
+  }
+</script>
+
+<style>
+  .notice {
+    width: min(460px, calc(100vw - 32px));
+    padding: 0; border-radius: 16px; overflow: hidden;
+    border: 1px solid rgba(255,255,255,.14);
+    background: #0d0d10; color: var(--text);
+    box-shadow: 0 40px 120px rgba(0,0,0,.75);
+  }
+  .notice[open] { animation: n-in .3s ease-out; }
+  @keyframes n-in { from { opacity: 0; transform: translateY(14px) scale(.98); } }
+  .notice::backdrop { background: rgba(0,0,0,.6); backdrop-filter: blur(6px); }
+  .n-bar {
+    display: flex; align-items: center; gap: 10px; height: 44px; padding: 0 18px;
+    border-bottom: 1px solid var(--line); background: rgba(255,255,255,.02);
+  }
+  .n-dot {
+    width: 8px; height: 8px; border-radius: 999px; background: #f5b83d;
+    box-shadow: 0 0 0 4px rgba(245,184,61,.2); animation: n-pulse 1.8s ease-in-out infinite;
+  }
+  @keyframes n-pulse { 50% { box-shadow: 0 0 0 7px rgba(245,184,61,0); } }
+  .n-status { font-size: 11px; letter-spacing: .12em; color: #f5d68f; }
+  .n-tc { margin-left: auto; font-size: 11px; color: var(--text-3); }
+  .n-body { padding: 28px 28px 26px; display: flex; flex-direction: column; gap: 12px; }
+  .n-kicker { margin: 0; font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-hi); }
+  .n-body h2 { margin: 0; font-size: 30px; font-weight: 600; letter-spacing: -0.03em; line-height: 1.1; }
+  .n-text { margin: 0; font-size: 16px; line-height: 1.6; color: var(--text-2); }
+  .n-progress { margin-top: 8px; height: 4px; border-radius: 999px; background: rgba(255,255,255,.1); overflow: hidden; }
+  .n-progress span { display: block; height: 100%; background: linear-gradient(90deg, var(--accent), #f5b83d); border-radius: inherit; }
+  .n-small { margin: 0; font-size: 11px; color: var(--text-3); }
+  .n-btn { align-self: flex-start; margin-top: 10px; border: 0; cursor: pointer; font: inherit; font-size: 16px; font-weight: 500; }
+</style>
